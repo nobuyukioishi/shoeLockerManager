@@ -1,1 +1,2 @@
 # shoeLockerManager
+for applications
