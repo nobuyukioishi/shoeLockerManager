@@ -33,16 +33,47 @@ class ShoeLocker:
                 print(self.locker[i][j], "\t|\t", end="")
             print()
 
-    def get_state(self, imgs):
+    def get_big_picture(self):
+        """
+        :param NONE
+        :return True, False
+        Save picture of raspi-cam to temp/raspi_pic.jpg
         """
 
-        :param imgs: list of a shoe locker's images
-        :return: list of the shoe locker's state
+    def dissemble_big_picture(self, raspi_im="temp/raspi_pic.jpg"):
         """
+        :param raspi_im: Name of picture to dissemble, this time raspi_im
+        :return count: number of dissembled picture
+        Save dissembled pictures to temp/, names box%s.png %s is integer goes 0 to count-1
+        """
+        
+
+
+    def get_state(self, count=int):
+        """
+        :param imgs: list of a shoe locker's images
+        :return: list of tuple (predict, time) for each shoe locker's state
+        """
+
+        if(count!=row*col):
+            print("count!=row*col")
+            break
+        
+        # get shoe np array
+        shoesArray = functions.pic_to_np_array(count)
+        # predict arrays
+        predict_list = functions.predict(shoesArray)
+        print(shoesArray)
+        
+        time_stamped_predict_list= []
+        time = '{0:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now())
+        for predict in predict_list:
+            time_stamped_predict_list.append( (predict, time) )
+        return time_stamped_predict_list
+
 
     def push_state(self, state):
         """
-
         :param state: list of the shoe locker's state
         :return: nothing, but push the information to SQL server
         """
