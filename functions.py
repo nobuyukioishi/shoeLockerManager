@@ -30,7 +30,7 @@ def pic_to_np_array(count=int, kernel_width=56, kernel_height=56):
     bigArray= bigArray.reshape(-1,kernel_width,kernel_height,3)
     return bigArray
 
-def predictShoe(shoeArray):
+def predict_shoe(shoe):
     """
     it checks the input files' state
 
@@ -42,7 +42,7 @@ def predictShoe(shoeArray):
     model_filename = 'cnn_model.json'
     weights_filename = 'cnn_model_weights.hdf5'
 
-    # 1. load model
+    # load model
     json_string = open(os.path.join(f_model, model_filename)).read()
     model = model_from_json(json_string)
     sgd = SGD(lr=1e-2, decay=1e-6, momentum=0.9, nesterov=True)
@@ -53,11 +53,11 @@ def predictShoe(shoeArray):
                   metrics=['accuracy'])
     model.load_weights(os.path.join(f_model, weights_filename))
 
-    # 3. predict certainty
-    probability = model.predict(shoeArray, batch_size=26, verbose=1)
+    # predict certainty
+    probability = model.predict(shoe, batch_size=26, verbose=1)
     return probability
 
-def get_bigShoeBox_array(x, y, height, width, raspi_im="temp/raspi_pic.jpg"):
+def get_big_shoe_box_array(x, y, height, width, raspi_im="temp/raspi_pic.jpg"):
     """
     :param raspi_im
     :return : big shoe box position
@@ -72,9 +72,6 @@ def get_bigShoeBox_array(x, y, height, width, raspi_im="temp/raspi_pic.jpg"):
     cv2.imshow("cropped", crop_img)
     cv2.waitKey(0)
     #turn crop image to np array
-    npImage = np.asarray(crop_img)
-    # npImage=npImage*(1./255)
-    # npImage=np.swapaxes(npImage,0,2)
-    # npImage=np.swapaxes(npImage,1,2)
-    return npImage
+    np_image = np.asarray(crop_img)
+    return np_image
 

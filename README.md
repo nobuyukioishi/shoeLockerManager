@@ -18,6 +18,9 @@ functionName(Input : type) -> Output : type
 3. imageRecognize(  {'id':integer , 'Shoe':numpy array} ) -> {'id':integer , 'isShoe':bool} : dictionary
 4. saveResult( {'id':integer , 'isShoe':bool}) -> ...
 
-Notice:
+## Notice:
 1. id in imageRecognize and saveResult are same array.
 2. dissembler can save images in jpg for debugging.
+
+## Readability:
+module_name, package_name, ClassName, method_name, ExceptionName, function_name, GLOBAL_CONSTANT_NAME, global_var_name, instance_var_name, function_parameter_name, local_var_name
