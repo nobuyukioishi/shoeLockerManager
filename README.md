@@ -21,4 +21,3 @@ functionName(Input : type) -> Output : type
 Notice:
 1. id in imageRecognize and saveResult are same array.
 2. dissembler can save images in jpg for debugging.
-
