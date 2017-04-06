@@ -113,7 +113,7 @@ class ShoeLocker:
         time_stamped_predict_list = []
         time = '{0:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now())
         for index, predict in enumerate(predict_list):
-            # index = i*self.col+j
+            # index = i * self.col + j
             i = int(index / self.col)
             j = int(index - i * self.col)
             if predict > 0.8:
