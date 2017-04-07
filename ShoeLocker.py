@@ -1,4 +1,3 @@
-import cv2
 from functions import *
 import datetime
 import pymysql.cursors
@@ -123,7 +122,7 @@ class ShoeLocker:
         return time_stamped_predict_list
 
     @staticmethod
-    def push_status(box_no, last_in, last_out):
+    def push_status(db_info, box_no, last_in, last_out):
         """
 
         :param recordedTime:
@@ -133,12 +132,12 @@ class ShoeLocker:
         :return:
         """
 
-        connection = pymysql.connect(host='192.168.11.140',
-                                     user='piyo',
-                                     password='PassWord123@',
-                                     db='shoeLockerManager',
-                                     charset='utf8',
-                                     cursorclass=pymysql.cursors.DictCursor)
+        connection = pymysql.connect(host=db_info.host,
+                                     user=db_info.user,
+                                     password=db_info.password,
+                                     db=db_info.db,
+                                     charset=db_info.charset,
+                                     cursorclass=db_info.cursorclass)
 
         with connection.cursor() as cursor:
             command = "insert into status (recordedTime,boxNo,lastIn,lastOut) values(now(),"+str(box_no)+",'"+str(last_in)+"','"+str(last_out)+"')"

@@ -1,5 +1,8 @@
 from ShoeLocker import ShoeLocker
+from LockerDB import LockerDB
 import datetime
+import pymysql.cursors
+
 
 # stick this datetime format '{0:%Y-%m-%d %H:%M:%S}'
 
@@ -16,4 +19,11 @@ out = shoeLocker.get_state(count)
 print(out)
 """
 
-ShoeLocker.push_status(11, "2017-11-11 11:11:11", "2017-11-11 11:11:11")
+db = LockerDB(host='192.168.11.140',
+              user='piyo',
+              password='PassWord123@',
+              db='shoeLockerManager',
+              charset='utf8',
+              cursorclass=pymysql.cursors.DictCursor)
+
+ShoeLocker.push_status(db, 11, "2017-11-11 11:11:11", "2017-11-11 11:11:11")
