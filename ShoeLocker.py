@@ -124,7 +124,7 @@ class ShoeLocker:
                 time_stamped_predict_list.append((i, j, (False, time)))
         return time_stamped_predict_list
 
-    def push_status(self, box_no, last_in, last_out):
+    def push_status(self, box_no, status, last_in, last_out):
         """
 
         :param recordedTime:
@@ -146,10 +146,11 @@ class ShoeLocker:
                                      cursorclass=self.db_info['cursorclass'])
 
         with connection.cursor() as cursor:
-            command = "insert into status (recordedTime,boxNo,lastIn,lastOut) values(now(),"+str(box_no)+",'"+str(last_in)+"','"+str(last_out)+"')"
+            command = "insert into status (recordedTime,boxNo,status, lastIn,lastOut) values(now()," \
+                      + str(box_no)+","+status+",'"+str(last_in)+"','"+str(last_out)+"')"
             # print(command)
             cursor.execute(command)
             connection.commit()
-        connection.close();
+        connection.close()
 
         return
