@@ -19,11 +19,12 @@ out = shoeLocker.get_state(count)
 print(out)
 """
 
-db = LockerDB(host='192.168.11.140',
-              user='piyo',
-              password='PassWord123@',
-              db='shoeLockerManager',
-              charset='utf8',
-              cursorclass=pymysql.cursors.DictCursor)
+shoeLocker.set_database_info(host='192.168.11.140',
+                             user='piyo',
+                             password='PassWord123@',
+                             db='shoeLockerManager',
+                             charset='utf8',
+                             cursorclass=pymysql.cursors.DictCursor)
 
-ShoeLocker.push_status(db, 11, "2017-11-11 11:11:11", "2017-11-11 11:11:11")
+
+shoeLocker.push_status(11, "2017-11-11 11:11:11", "2017-11-11 11:11:11")

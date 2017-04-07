@@ -11,8 +11,7 @@ small or one shoebox: smallShoeBox
 
 
 class ShoeLocker:
-    def __init__(self, row, col, def_value=(False, "0000-00-00 00:00:00"), rowHeight=28, colWidth=56,
-                 kernelSize=(56, 56)):
+    def __init__(self, row, col, def_value=(False, "0000-00-00 00:00:00"), rowHeight=28, colWidth=56, kernelSize=(56, 56)):
         """
         :param row: shoe locker's row
         :param col: shoe locker's column
@@ -23,6 +22,10 @@ class ShoeLocker:
         self.rowHeight = rowHeight
         self.colWidth = colWidth
         self.kernelSize = (56, 56)
+        self.db_info = None
+
+    def set_database_info(self, host, user, password, db, charset="utf8", cursorclass=pymysql.cursors.DictCursor):
+        self.db_info = dict(host=host, user=user, password=password, db=db, charset=charset, cursorclass=cursorclass)
 
     def change_status_to(self, x, y, status):
         """
@@ -121,8 +124,7 @@ class ShoeLocker:
                 time_stamped_predict_list.append((i, j, (False, time)))
         return time_stamped_predict_list
 
-    @staticmethod
-    def push_status(db_info, box_no, last_in, last_out):
+    def push_status(self, box_no, last_in, last_out):
         """
 
         :param recordedTime:
@@ -132,12 +134,16 @@ class ShoeLocker:
         :return:
         """
 
-        connection = pymysql.connect(host=db_info.host,
-                                     user=db_info.user,
-                                     password=db_info.password,
-                                     db=db_info.db,
-                                     charset=db_info.charset,
-                                     cursorclass=db_info.cursorclass)
+        if self.db_info is None:
+            print("ERROR! You should execute set_database_info() before use this method!")
+            exit()
+
+        connection = pymysql.connect(host=self.db_info['host'],
+                                     user=self.db_info['user'],
+                                     password=self.db_info['password'],
+                                     db=self.db_info['db'],
+                                     charset=self.db_info['charset'],
+                                     cursorclass=self.db_info['cursorclass'])
 
         with connection.cursor() as cursor:
             command = "insert into status (recordedTime,boxNo,lastIn,lastOut) values(now(),"+str(box_no)+",'"+str(last_in)+"','"+str(last_out)+"')"
