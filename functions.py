@@ -54,7 +54,7 @@ def predictShoe(shoeArray):
     model.load_weights(os.path.join(f_model, weights_filename))
 
     # 3. predict certainty
-    probability = model.predict(shoeArray, batch_size=26, verbose=1)
+    probability = model.predict(shoeArray, batch_size=26, verbose=0)
     return probability
 
 def get_bigShoeBox_array(x, y, height, width, raspi_im="temp/raspi_pic.jpg"):
