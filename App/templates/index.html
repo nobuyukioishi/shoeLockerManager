@@ -1,12 +1,11 @@
 <html>
 <head>
   <title>Sample</title>
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="templates/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="templates/css/style.css?q=11112341234141234">
 </head>
 </body>
 <div id="wrapper">
-  {{ test }}
   <script type="text/JavaScript">
   <!--
   var DWs = new Array('Sun.','Mon.','Tue.','Wed.','Thu.','Fri.','Sat.');
@@ -26,24 +25,142 @@
   if(hh < 10) { hh = "0" + hh; }
   if(mm < 10) { mm = "0" + mm; }
   if(ss < 10) { ss = "0" + ss; }
-  document.write('<p id="curtime">Current time: ' + YY + '.' + MM + '.' + DD + ' ' + DW + ' ' + hh + ':' + mm + ':' + ss + ' </p>');
+  document.write('<p id="curtime">' + YY + '.' + MM + '.' + DD + ' ' + DW + ' ' + hh + ':' + mm + ':' + ss + ' </p>');
   // -->
   </script>
   <div class="row0">
-    <div class="col0" id="box0">0</div>
-    <div class="col1" id="box1">1</div>
-    <div class="col2" id="box2">2</div>
+      <div class="col0" id="box0">
+        <p class="boxNo">No: {{data[0]['boxNo']}}</p>
+        {% if data[0]['status'] == 1 %}
+          <p class="status">True</p>
+        {% else %}
+          <p class="status">False</p>
+        {% endif %}
+        {% if data[0]['status'] == 1 %}
+          <p class="lastIn">Since: {{data[0]['lastIn']}}</p>
+        {% else %}
+          <p class="lastOut">Since: {{data[0]['lastOut']}}<p>
+        {% endif %}
+        <p class="recordedTime">{{data[0]['recordedTime']}}</p>
+      </div>
+      <div class="col1" id="box1">
+        <p class="boxNo">No: {{data[1]['boxNo']}}</p>
+        {% if data[1]['status'] == 1 %}
+          <p class="status">True</p>
+        {% else %}
+          <p class="status">False</p>
+        {% endif %}
+        {% if data[1]['status'] == 1 %}
+          <p class="lastIn">Since: {{data[1]['lastIn']}}</p>
+        {% else %}
+          <p class="lastOut">Since: {{data[1]['lastOut']}}<p>
+        {% endif %}
+        <p class="recordedTime">{{data[1]['recordedTime']}}</p>
+      </div>
+      <div class="col2" id="box2">
+        <p class="boxNo">No: {{data[2]['boxNo']}}</p>
+        {% if data[2]['status'] == 1 %}
+          <p class="status">True</p>
+        {% else %}
+          <p class="status">False</p>
+        {% endif %}
+        {% if data[2]['status'] == 1 %}
+          <p class="lastIn">Since: {{data[2]['lastIn']}}</p>
+        {% else %}
+          <p class="lastOut">Since: {{data[2]['lastOut']}}<p>
+        {% endif %}
+        <p class="recordedTime">{{data[2]['recordedTime']}}</p>
+      </div>
   </div>
+
+
   <div class="row1">
-    <div class="col0" id="box3">3</div>
-    <div class="col1" id="box4">4</div>
-    <div class="col2" id="box5">5</div>
+      <div class="col0" id="box3">
+        <p class="boxNo">No: {{data[3]['boxNo']}}</p>
+        {% if data[3]['status'] == 1 %}
+          <p class="status">True</p>
+        {% else %}
+          <p class="status">False</p>
+        {% endif %}
+        {% if data[3]['status'] == 1 %}
+          <p class="lastIn">Since: {{data[3]['lastIn']}}</p>
+        {% else %}
+          <p class="lastOut">Since: {{data[3]['lastOut']}}<p>
+        {% endif %}
+        <p class="recordedTime">{{data[3]['recordedTime']}}</p>
+      </div>
+      <div class="col1" id="box4">
+        <p class="boxNo">No: {{data[4]['boxNo']}}</p>
+        {% if data[4]['status'] == 1 %}
+          <p class="status">True</p>
+        {% else %}
+          <p class="status">False</p>
+        {% endif %}
+        {% if data[4]['status'] == 1 %}
+          <p class="lastIn">Since: {{data[4]['lastIn']}}</p>
+        {% else %}
+          <p class="lastOut">Since: {{data[4]['lastOut']}}<p>
+        {% endif %}
+        <p class="recordedTime">{{data[4]['recordedTime']}}</p>
+      </div>
+      <div class="col2" id="box5">
+        <p class="boxNo">No: {{data[5]['boxNo']}}</p>
+        {% if data[5]['status'] == 1 %}
+          <p class="status">True</p>
+        {% else %}
+          <p class="status">False</p>
+        {% endif %}
+        {% if data[5]['status'] == 1 %}
+          <p class="lastIn">Since: {{data[5]['lastIn']}}</p>
+        {% else %}
+          <p class="lastOut">Since: {{data[5]['lastOut']}}<p>
+        {% endif %}
+        <p class="recordedTime">{{data[5]['recordedTime']}}</p>
+      </div>
   </div>
   <div class="row2">
-    <div class="col0" id="box6">6</div>
-    <div class="col1" id="box7">7</div>
-    <div class="col2" id="box8">8</div>
+    <div class="col0" id="box6">
+      <p class="boxNo">No: {{data[6]['boxNo']}}</p>
+      {% if data[6]['status'] == 1 %}
+        <p class="status">True</p>
+      {% else %}
+        <p class="status">False</p>
+      {% endif %}
+      {% if data[6]['status'] == 1 %}
+        <p class="lastIn">Since: {{data[6]['lastIn']}}</p>
+      {% else %}
+        <p class="lastOut">Since: {{data[6]['lastOut']}}<p>
+      {% endif %}
+      <p class="recordedTime">{{data[6]['recordedTime']}}</p>
+    </div>
+    <div class="col1" id="box7">
+      <p class="boxNo">No: {{data[7]['boxNo']}}</p>
+      {% if data[7]['status'] == 1 %}
+        <p class="status">True</p>
+      {% else %}
+        <p class="status">False</p>
+      {% endif %}
+      {% if data[7]['status'] == 1 %}
+        <p class="lastIn">Since: {{data[7]['lastIn']}}</p>
+      {% else %}
+        <p class="lastOut">Since: {{data[7]['lastOut']}}<p>
+      {% endif %}
+      <p class="recordedTime">{{data[7]['recordedTime']}}</p>
+    </div>
+    <div class="col2" id="box8">
+      <p class="boxNo">No: {{data[8]['boxNo']}}</p>
+      {% if data[8]['status'] == 1 %}
+        <p class="status">True</p>
+      {% else %}
+        <p class="status">False</p>
+      {% endif %}
+      {% if data[8]['status'] == 1 %}
+        <p class="lastIn">Since: {{data[8]['lastIn']}}</p>
+      {% else %}
+        <p class="lastOut">Since: {{data[8]['lastOut']}}<p>
+      {% endif %}
+      <p class="recordedTime">{{data[8]['recordedTime']}}</p>
+    </div>
   </div>
-</div>
 </body>
 </html>
