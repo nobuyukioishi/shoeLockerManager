@@ -1,4 +1,3 @@
-import cv2
 from functions import *
 import datetime
 import pymysql.cursors
@@ -12,8 +11,18 @@ small or one shoebox: smallShoeBox
 
 
 class ShoeLocker:
-    def __init__(self, row, col, def_value=("0000-00-00 00:00:00", 0, 0, "0000-00-00 00:00:00", "0000-00-00 00:00:00"), row_height=28, col_width=56,
-                 kernelSize=(56, 56)):
+
+    def __init__(self, row, col, 
+                    def_value=(
+                        {'recordedTime': "0000-00-00 00:00:00",
+                         'boxNo': 0,
+                         'status': 0,
+                         'lastIn': "0000-00-00 00:00:00",
+                         'lastOut': "0000-00-00 00:00:00"
+                        }),
+                    row_height=28, col_width=56, kernel_size=(56, 56)
+                ):
+
         """
         :param row: shoe locker's row
         :param col: shoe locker's column
@@ -21,32 +30,63 @@ class ShoeLocker:
         self.locker = [[def_value for i in range(col)] for j in range(row)]
         self.row = row
         self.col = col
+
         self.row_height = row_height
         self.col_width = col_width
-        self.kernelSize = (56, 56)
-        self.config =  {
-            'host': '192.168.11.140',
-            'db': 'shoeLockerManager',
-            'user': 'piyo',
-            'password': 'PassWord123@',
-            'charset': 'utf8',
-            'cursorclass': pymysql.cursors.DictCursor
-        }
+        self.kernel_size = (56, 56)
         self.table_name = 'info'
 
-    def change_status_to(self, x, y, status):
+    def set_database_info(self, host, user, password, db, charset="utf8", cursorclass=pymysql.cursors.DictCursor):
+        self.db_info = dict(host=host, user=user, password=password, db=db, charset=charset, cursorclass=cursorclass)
+
+    def change_status_to(self, kwargs):
         """
         :param x: row
         :param y: col
-        :param status: (True/False, time)
+        :param status: {'recordedTime': ,
+                        'boxNo': ,
+                        'status':,
+                        'lastIn':,
+                        'lastOut': }
         :return: None
         """
-        if type(status) != tuple:
-            print("status should be tuple object")
-            return
+        x = int(kwargs['boxNo'] / self.col)
+        y = kwargs['boxNo'] % self.row
 
-        self.locker[x - 1][y - 1] = status
-        return
+        # check if lastIn is setted
+        if kwargs['lastIn'] == -1:
+            # lastIn == 0
+            if self.locker[x][y]==1 and kwargs['status']==0:
+                # shoe has moved out, renew LastOut
+                self.locker[x][y] = {'recordedTime': kwargs['recordedTime'],
+                                     'boxNo': kwargs['boxNo'],
+                                     'status': kwargs['status'],
+                                     'lastIn': self.locker[x][y]['lastIn'],
+                                     'lastOut': kwargs['recordedTime']
+                                    }
+            elif self.locker[x][y]==0 and kwargs['status']==1:
+                # shoe has moved in, renew LastIn
+                self.locker[x][y] = {'recordedTime': kwargs['recordedTime'],
+                                     'boxNo': kwargs['boxNo'],
+                                     'status': kwargs['status'],
+                                     'lastIn': kwargs['recordedTime'],
+                                     'lastOut': self.locker[x][y]['lastOut']
+                                    }
+            else:
+                self.locker[x][y] = {'recordedTime': kwargs['recordedTime'],
+                                     'boxNo': kwargs['boxNo'],
+                                     'status': kwargs['status'],
+                                     'lastIn': kwargs['recordedTime'],
+                                     'lastOut': self.locker[x][y]['lastOut']
+                                    }  
+        else:
+            self.locker[x][y] = {'recordedTime': kwargs['recordedTime'],
+                                 'boxNo': kwargs['boxNo'],
+                                 'status': kwargs['status'],
+                                 'lastIn': kwargs['lastIn'],
+                                 'lastOut': kwargs['lastOut']
+                                }
+            return
 
     def print_status(self):
         for i in range(len(self.locker[0])):
@@ -98,7 +138,7 @@ class ShoeLocker:
                 shoeBox = warpedImg[i * self.row_height: (i + 1) * self.row_height,
                           j * self.col_width: (j + 1) * self.col_width]
                 # because current picture size is 28*56, to feed 56*56 kernel, we will resize it
-                CubicImg = cv2.resize(shoeBox, self.kernelSize)
+                CubicImg = cv2.resize(shoeBox, self.kernel_size)
                 cv2.imwrite('temp/box%s.png' % (i * self.col + j), CubicImg)
 
         return self.row * self.col
@@ -124,9 +164,24 @@ class ShoeLocker:
         for index, predict in enumerate(predict_list):
 
             if predict > 0.8:
-                time_stamped_predict_list.append((index, (True, time)))
+                d = {'recordedTime': time,
+                 'boxNo': index,
+                 'status': True, 
+                 'lastIn': -1,
+                 'lastOut': -1   
+                 }
+                self.change_status_to(d)
+                time_stamped_predict_list.append(d)
+
             else:
-                time_stamped_predict_list.append((index, (False, time)))
+                d = {'recordedTime': time,
+                 'boxNo': index,
+                 'status': False, 
+                 'lastIn': -1,
+                 'lastOut': -1  
+                 }
+                self.change_status_to(d)
+                time_stamped_predict_list.append(d)
         return time_stamped_predict_list
 
 
@@ -140,60 +195,43 @@ class ShoeLocker:
         :return:
         """
 
-        connection = pymysql.connect(**self.config)
+
+        if self.db_info is None:
+            print("ERROR! You should execute set_database_info() before use this method!")
+            exit()
+
+        connection = pymysql.connect(host=self.db_info['host'],
+                                     user=self.db_info['user'],
+                                     password=self.db_info['password'],
+                                     db=self.db_info['db'],
+                                     charset=self.db_info['charset'],
+                                     cursorclass=self.db_info['cursorclass'])
 
         with connection.cursor() as cursor:
-            command = "insert into "+self.table_name+" (recordedTime,boxNo,status,lastIn,lastOut) values(now(),"+str(box_no)+","+str(status)+",'"+str(last_in)+"','"+str(last_out)+"')"
+            command = "insert into "+self.table_name+" (recordedTime,boxNo,status,lastIn,lastOut) values(now()," \
+                      + str(box_no)+","+status+",'"+str(last_in)+"','"+str(last_out)+"')"
+
             cursor.execute(command)
             connection.commit()
-        connection.close();
+        connection.close()
 
         return
 
-    def push_many_status(self, time_stamped_predict_list):
-        """
 
-        :param time_stamped_predict_list: new information of shoeBox.
-        :return 
-        """
-        connection = pymysql.connect(**self.config)
+    # def push_many_status(self, time_stamped_predict_list):
+    #     """
+    #     :param time_stamped_predict_list: new information of shoeBox.
+    #     :return 
+    #     """
+    #     connection = pymysql.connect(**self.config)
 
-        # # TODO: get most new status of each shoebox
-        # with connection.cursor() as cursor:
-        #     sql = "select X.recordedTime, X.boxNo, X.status, X.lastIn, X.lastOut "
-        #             + "from info as X, (select max(recordedTime) as max, boxNo "
-        #                                 + "from info group by boxNo) as Y "
-        #                                 + "where X.recordedTime = Y.max AND X.boxNo = Y.boxNo;"
-        #     cursor.execute(sql)
-        #     results = cursor.fetchall()
+    #     # TODO: get most new status of each shoebox
+    #     with connection.cursor() as cursor:
+    #         sql = "select X.recordedTime, X.boxNo, X.status, X.lastIn, X.lastOut "
+    #                 + "from info as X, (select max(recordedTime) as max, boxNo "
+    #                                     + "from info group by boxNo) as Y "
+    #                                     + "where X.recordedTime = Y.max AND X.boxNo = Y.boxNo;"
+    #         cursor.execute(sql)
+    #         results = cursor.fetchall()
 
-        # for predicted_record in time_stamped_predict_list:
-
-
-
-# 'lastIn': datetime.datetime(2016, 11, 11, 0, 11, 11), 
-#'boxNo': 8, 
-#'recordedTime': datetime.datetime(2017, 4, 8, 7, 12, 54), 
-#'status': 0, 
-#'lastOut': datetime.datetime(2017, 11, 11, 0, 11, 11)
-
-        # # TODO: make new records by loop
-        # with connection.cursor() as cursor:
-        #     # make new record
-        #     names = ()
-        #     # append tuple
-        #     # name = name + (('yea', 'oh yea'),)
-        #     # name = name + (('yea', 'oh yea'),)
-        #     # name = name + (('yea', 'oh yea'),)
-        #     # name = (('now()', boxNo, status, lastIn, lastOut),)
-        #     stmt_insert = "INSERT INTO "+self.table_name+" (recordedTime,boxNo,status,lastIn,lastOut) VALUES (%s, %s, %s, %s, %s)"
-        #     cursor.executemany(stmt_insert, names)
-        #     connection.commit()
-
-        # connection.close();
-
-        # return
-
-
-
-
+    #     for predicted_record in time_stamped_predict_list:

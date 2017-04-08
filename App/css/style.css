@@ -1,0 +1,40 @@
+#wrapper {
+  width: 70%;
+  background: #dddddd;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+}
+
+/*
+.clearfix:after {
+  content: "";
+  clear: both;
+  background: #e58;
+}
+*/
+
+.row0, .row1, .row2 {
+  margin: 0 auto;
+  height: 100px;
+  width: 90%
+}
+
+
+.col0, .col1, .col2 {
+  float: left;
+  border: 1px;
+  width: 32%;
+  border-style: solid;
+  border-color: orange;
+  text-align: center;
+  height: 100%;
+}
+
+#curtime {
+  padding: 10px 0;
+}
+
+#lastupdated {
+  padding: 10px 0;
+}
