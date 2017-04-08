@@ -110,7 +110,7 @@ class ShoeLocker:
         """
 
         if count != self.row * self.col:
-            print("count!=row*col")
+            print("count != row * col")
 
         # get shoe np array
         shoesArray = pic_to_np_array(count)
@@ -122,13 +122,11 @@ class ShoeLocker:
         time_stamped_predict_list = []
         time = '{0:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now())
         for index, predict in enumerate(predict_list):
-            # index = i * self.col + j
-            i = int(index / self.col)
-            j = int(index - i * self.col)
+
             if predict > 0.8:
-                time_stamped_predict_list.append((i, j, (True, time)))
+                time_stamped_predict_list.append((index, (True, time)))
             else:
-                time_stamped_predict_list.append((i, j, (False, time)))
+                time_stamped_predict_list.append((index, (False, time)))
         return time_stamped_predict_list
 
 
@@ -154,5 +152,29 @@ class ShoeLocker:
         connection.close();
 
         return
+
+    def push_many_status(self, time_stamped_predict_list):
+        """
+
+        :param time_stamped_predict_list: new information of shoeBox.
+        :return 
+        """
+
+        connection = pymysql.connect(**self.config)
+
+        # TODO: get most new status of each shoebox
+
+
+        with connection.cursor() as cursor:
+            # make new record
+            names = (('now()', boxNo, status, lastIn, lastOut),)
+            stmt_insert = "INSERT INTO "+self.table_name+" (recordedTime, boxNo, status, lastIn, lastOut) VALUES (%s, %s, %s, %s, %s)"
+            cursor.executemany(stmt_insert, names)
+            connection.commit()
+
+        connection.close();
+
+        return
+
 
 
