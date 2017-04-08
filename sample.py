@@ -5,26 +5,31 @@ import pymysql.cursors
 
 # stick this datetime format '{0:%Y-%m-%d %H:%M:%S}'
 
-# shoeLocker = ShoeLocker(row=3, col=3, (True, '{0:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now())))
 shoeLocker = ShoeLocker(row=3, col=3)
-# shoeLocker.change_status_to(2, 3, (False, "2015-11-11 11:11:11"))
+shoeLocker.set_database_info(host='192.168.11.140',
+                             user='piyo',
+                             password='PassWord123@',
+                             db='shoeLockerManager',
+                             charset='utf8',
+                             cursorclass=pymysql.cursors.DictCursor)
+
 shoeLocker.print_status()
-
-# x = ([804, 164], [1328, 165], [807, 815], [1293, 816])
-# shoeLocker.change_locker_edge_points_to(shoeBoxEdgePoints=x)
-
-# count = shoeLocker.dissemble_bigShoeBox(raspi_im="temp/raspi_pic.jpg")
-
-# out = shoeLocker.get_state(count)
-
 kwargs ={'recordedTime': datetime.datetime.now(),
                                  'boxNo': 1,
                                  'status': 0,
                                  'lastIn': datetime.datetime.now(),
                                  'lastOut': datetime.datetime.now()
                                 }
-shoeLocker.change_status_to(kwargs)
-shoeLocker.print_status()
+shoeLocker.save_picture()
+# shoeLocker.change_status_to(kwargs)
+# shoeLocker.print_status()
+# x = ([804, 164], [1328, 165], [807, 815], [1293, 816])
+# shoeLocker.change_locker_edge_points_to(shoeBoxEdgePoints=x)
+# count = shoeLocker.dissemble_big_shoe_box(raspi_im="temp/raspi_pic.jpg")
+# shoeLocker.get_state(count)
+# shoeLocker.print_status()
+# shoeLocker.push_many_status()
+
 
 # ShoeLocker.push_status(10, 1,"2017-11-11 11:11:11", "2017-11-11 11:11:11")
 # shoeLocker.push_status(0, 0,"2017-11-11 11:00:11", "2017-11-11 11:00:11")

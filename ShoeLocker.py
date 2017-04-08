@@ -14,11 +14,11 @@ class ShoeLocker:
 
     def __init__(self, row, col, 
                     def_value=(
-                        {'recordedTime': "0000-00-00 00:00:00",
+                        {'recordedTime': "2017-04-08 20:56:30",
                          'boxNo': 0,
                          'status': 0,
-                         'lastIn': "0000-00-00 00:00:00",
-                         'lastOut': "0000-00-00 00:00:00"
+                         'lastIn': "2017-04-08 20:56:30",
+                         'lastOut': "2017-04-08 20:56:30"
                         }),
                     row_height=28, col_width=56, kernel_size=(56, 56)
                 ):
@@ -98,12 +98,6 @@ class ShoeLocker:
                 print(self.locker[i][j], "\t|\t", end="")
             print()
 
-    def get_big_picture(self):
-        """
-        :param NONE
-        :return True, False
-        Save picture of raspi-cam to temp/raspi_pic.jpg
-        """
 
     def change_locker_edge_points_to(self, shoeBoxEdgePoints):
         """
@@ -113,7 +107,7 @@ class ShoeLocker:
         self.x1x1, self.x1y2, self.x2y1, self.x2y2 = shoeBoxEdgePoints
         return
 
-    def dissemble_bigShoeBox(self, raspi_im="temp/raspi_pic.jpg"):
+    def dissemble_big_shoe_box(self, raspi_im="temp/raspi_pic.jpg"):
         """
         :param raspi_im: Name of picture to dissemble, this time raspi_im
         :return count: number of dissembled picture
@@ -145,20 +139,21 @@ class ShoeLocker:
 
     def get_state(self, count=int):
         """
+        Saves object
         :param count: number of a shoe locker's images
         :return: list of tuple (predict, time) for each shoe locker's state
+
         """
 
         if count != self.row * self.col:
             print("count != row * col")
 
         # get shoe np array
-        shoesArray = pic_to_np_array(count)
+        shoes_arrays = pic_to_np_array(count)
         # predict arrays
-        predict_list = predictShoe(shoesArray)
-        # for debug
-        # return predict_list
+        predict_list = predictShoe(shoes_arrays)
 
+        # set state of each box by using change_status_to
         time_stamped_predict_list = []
         time = '{0:%Y-%m-%d %H:%M:%S}'.format(datetime.now())
         for index, predict in enumerate(predict_list):
@@ -217,21 +212,43 @@ class ShoeLocker:
 
         return
 
+    def push_many_status(self):
+        """
+        Push locker variables to Database
+        """
 
-    # def push_many_status(self, time_stamped_predict_list):
-    #     """
-    #     :param time_stamped_predict_list: new information of shoeBox.
-    #     :return 
-    #     """
-    #     connection = pymysql.connect(**self.config)
+        if self.db_info is None:
+            print("ERROR! You should execute set_database_info() before use this method!")
+            exit()
 
-    #     # TODO: get most new status of each shoebox
-    #     with connection.cursor() as cursor:
-    #         sql = "select X.recordedTime, X.boxNo, X.status, X.lastIn, X.lastOut "
-    #                 + "from info as X, (select max(recordedTime) as max, boxNo "
-    #                                     + "from info group by boxNo) as Y "
-    #                                     + "where X.recordedTime = Y.max AND X.boxNo = Y.boxNo;"
-    #         cursor.execute(sql)
-    #         results = cursor.fetchall()
 
-    #     for predicted_record in time_stamped_predict_list:
+        connection = pymysql.connect(host=self.db_info['host'],
+                                     user=self.db_info['user'],
+                                     password=self.db_info['password'],
+                                     db=self.db_info['db'],
+                                     charset=self.db_info['charset'],
+                                     cursorclass=self.db_info['cursorclass'])
+
+         # TODO: make new records by loop
+        with connection.cursor() as cursor:
+            # make new record
+            bigCommand = ()
+            # append 
+            for index in range(self.row * self.col):
+                x = int(index / self.col)
+                y = int(index % self.row)
+                # print("yeah oh yea")
+                # print(self.locker[x][y])
+                currentBox = (str(self.locker[x][y]['recordedTime']), self.locker[x][y]['boxNo'], 
+                    self.locker[x][y]['status'],str(self.locker[x][y]['lastIn']),
+                    str(self.locker[x][y]['lastOut']))
+                bigCommand = bigCommand + (currentBox,)
+            # name = name + (('yea', 'oh yea'),)
+            # name = name + (('yea', 'oh yea'),)
+            # name = name + (('yea', 'oh yea'),)
+            # name = (('now()', boxNo, status, lastIn, lastOut),)
+            stmt_insert = "INSERT INTO "+self.table_name+" (recordedTime,boxNo,status,lastIn,lastOut) VALUES (%s, %s, %s, %s, %s)"
+            cursor.executemany(stmt_insert, bigCommand)
+            connection.commit()
+
+        return 
