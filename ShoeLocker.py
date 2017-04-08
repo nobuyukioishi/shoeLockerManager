@@ -163,12 +163,27 @@ class ShoeLocker:
         connection = pymysql.connect(**self.config)
 
         # TODO: get most new status of each shoebox
+        with connection.cursor() as cursor:
+            sql = "SELECT max(recordedTime), boxNo from info group by boxNo"
+            cursor.execute(sql)
+            results = cursor.fetchall()
+            for r in results:
+                #dictionary of r
+                print(r)
+                print(r['boxNo'])
+                print(r['max(recordedTime)'])
+        connection.close();
 
-
+        # TODO: make new records by loop
         with connection.cursor() as cursor:
             # make new record
-            names = (('now()', boxNo, status, lastIn, lastOut),)
-            stmt_insert = "INSERT INTO "+self.table_name+" (recordedTime, boxNo, status, lastIn, lastOut) VALUES (%s, %s, %s, %s, %s)"
+            names = ()
+            # append tuple
+            # name = name + (('yea', 'oh yea'),)
+            # name = name + (('yea', 'oh yea'),)
+            # name = name + (('yea', 'oh yea'),)
+            # name = (('now()', boxNo, status, lastIn, lastOut),)
+            stmt_insert = "INSERT INTO "+self.table_name+" (recordedTime,boxNo,status,lastIn,lastOut) VALUES (%s, %s, %s, %s, %s)"
             cursor.executemany(stmt_insert, names)
             connection.commit()
 
