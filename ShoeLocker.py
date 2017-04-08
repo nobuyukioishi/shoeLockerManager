@@ -12,7 +12,7 @@ small or one shoebox: smallShoeBox
 
 
 class ShoeLocker:
-    def __init__(self, row, col, def_value=(False, "0000-00-00 00:00:00"), rowHeight=28, colWidth=56,
+    def __init__(self, row, col, def_value=(False, "0000-00-00 00:00:00"), row_height=28, col_width=56,
                  kernelSize=(56, 56)):
         """
         :param row: shoe locker's row
@@ -21,9 +21,18 @@ class ShoeLocker:
         self.locker = [[def_value for i in range(col)] for j in range(row)]
         self.row = row
         self.col = col
-        self.rowHeight = rowHeight
-        self.colWidth = colWidth
+        self.row_height = row_height
+        self.col_width = col_width
         self.kernelSize = (56, 56)
+        self.config =  {
+            'host': '192.168.11.140',
+            'db': 'shoeLockerManager',
+            'user': 'piyo',
+            'password': 'PassWord123@',
+            'charset': 'utf8',
+            'cursorclass': pymysql.cursors.DictCursor
+        }
+        self.table_name = 'info'
 
     def change_status_to(self, x, y, status):
         """
@@ -78,16 +87,16 @@ class ShoeLocker:
         # affine transformation
         # points of target rectangle
         pts1 = np.float32([self.x1x1, self.x1y2, self.x2y1, self.x2y2])
-        pts2 = np.float32([[0, 0], [self.col * self.colWidth, 0], [0, self.row * self.rowHeight],
-                           [self.col * self.colWidth, self.row * self.rowHeight]])
+        pts2 = np.float32([[0, 0], [self.col * self.col_width, 0], [0, self.row * self.row_height],
+                           [self.col * self.col_width, self.row * self.row_height]])
         M = cv2.getPerspectiveTransform(pts1, pts2)
-        warpedImg = cv2.warpPerspective(img, M, (self.col * self.colWidth, self.row * self.colWidth))
+        warpedImg = cv2.warpPerspective(img, M, (self.col * self.col_width, self.row * self.col_width))
 
         # save image for shoeBox
         for i in range(0, self.row):
             for j in range(0, self.col):
-                shoeBox = warpedImg[i * self.rowHeight: (i + 1) * self.rowHeight,
-                          j * self.colWidth: (j + 1) * self.colWidth]
+                shoeBox = warpedImg[i * self.row_height: (i + 1) * self.row_height,
+                          j * self.col_width: (j + 1) * self.col_width]
                 # because current picture size is 28*56, to feed 56*56 kernel, we will resize it
                 CubicImg = cv2.resize(shoeBox, self.kernelSize)
                 cv2.imwrite('temp/box%s.png' % (i * self.col + j), CubicImg)
@@ -122,8 +131,8 @@ class ShoeLocker:
                 time_stamped_predict_list.append((i, j, (False, time)))
         return time_stamped_predict_list
 
-    @staticmethod
-    def push_status(box_no, last_in, last_out):
+
+    def push_status(self, box_no, status, last_in, last_out):
         """
 
         :param recordedTime:
@@ -133,18 +142,17 @@ class ShoeLocker:
         :return:
         """
 
-        connection = pymysql.connect(host='192.168.11.140',
-                                     user='piyo',
-                                     password='PassWord123@',
-                                     db='shoeLockerManager',
-                                     charset='utf8',
-                                     cursorclass=pymysql.cursors.DictCursor)
+        connection = pymysql.connect(**self.config)
 
         with connection.cursor() as cursor:
-            command = "insert into status (recordedTime,boxNo,lastIn,lastOut) values(now(),"+str(box_no)+",'"+str(last_in)+"','"+str(last_out)+"')"
-            # print(command)
+
+            command = "insert into "+self.table_name+" (recordedTime,boxNo,status,lastIn,lastOut) values(now(),"+str(box_no)+","+str(status)+",'"+str(last_in)+"','"+str(last_out)+"')"
+
             cursor.execute(command)
             connection.commit()
+
         connection.close();
 
         return
+
+
