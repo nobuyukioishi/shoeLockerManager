@@ -8,14 +8,14 @@ import pymysql.cursors
 shoeLocker = ShoeLocker(3, 3)
 shoeLocker.print_status()
 
-"""
+
 x = ([804, 164], [1328, 165], [807, 815], [1293, 816])
 shoeLocker.change_locker_edge_points_to(shoeBoxEdgePoints=x)
 count = shoeLocker.dissemble_bigShoeBox(raspi_im="temp/raspi_pic.jpg")
 print(count)
 out = shoeLocker.get_state(count)
 print(out)
-"""
+
 
 """
 

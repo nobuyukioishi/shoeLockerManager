@@ -121,15 +121,20 @@ class ShoeLocker:
         # return predict_list
 
         time_stamped_predict_list = []
-        time = '{0:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now())
+        time = '{0:%Y-%m-%d %H:%M:%S}'.format(datetime.now())
         for index, predict in enumerate(predict_list):
-            # index = i * self.col + j
-            i = int(index / self.col)
-            j = int(index - i * self.col)
             if predict > 0.8:
-                time_stamped_predict_list.append((i, j, (True, time)))
+                d = {'recordedTime': time,
+                 'boxNo': index,
+                 'status': True
+                 }
+                time_stamped_predict_list.append(d)
             else:
-                time_stamped_predict_list.append((i, j, (False, time)))
+                d = {'recordedTime': time,
+                 'boxNo': index,
+                 'status': False
+                 }
+                time_stamped_predict_list.append(d)
         return time_stamped_predict_list
 
     def push_status(self, box_no, status, last_in, last_out):
@@ -162,4 +167,47 @@ class ShoeLocker:
         connection.close()
 
         return
+
+    # def push_many_status(self, time_stamped_predict_list):
+    #     """
+    #     :param time_stamped_predict_list: new information of shoeBox.
+    #     :return 
+    #     """
+    #     connection = pymysql.connect(**self.config)
+
+    #     # TODO: get most new status of each shoebox
+    #     with connection.cursor() as cursor:
+    #         sql = "select X.recordedTime, X.boxNo, X.status, X.lastIn, X.lastOut "
+    #                 + "from info as X, (select max(recordedTime) as max, boxNo "
+    #                                     + "from info group by boxNo) as Y "
+    #                                     + "where X.recordedTime = Y.max AND X.boxNo = Y.boxNo;"
+    #         cursor.execute(sql)
+    #         results = cursor.fetchall()
+
+    #     for predicted_record in time_stamped_predict_list:
+
+
+
+# 'lastIn': datetime.datetime(2016, 11, 11, 0, 11, 11), 
+#'boxNo': 8, 
+#'recordedTime': datetime.datetime(2017, 4, 8, 7, 12, 54), 
+#'status': 0, 
+#'lastOut': datetime.datetime(2017, 11, 11, 0, 11, 11)
+
+        # # TODO: make new records by loop
+        # with connection.cursor() as cursor:
+        #     # make new record
+        #     names = ()
+        #     # append tuple
+        #     # name = name + (('yea', 'oh yea'),)
+        #     # name = name + (('yea', 'oh yea'),)
+        #     # name = name + (('yea', 'oh yea'),)
+        #     # name = (('now()', boxNo, status, lastIn, lastOut),)
+        #     stmt_insert = "INSERT INTO "+self.table_name+" (recordedTime,boxNo,status,lastIn,lastOut) VALUES (%s, %s, %s, %s, %s)"
+        #     cursor.executemany(stmt_insert, names)
+        #     connection.commit()
+
+        # connection.close();
+
+        # return
 
