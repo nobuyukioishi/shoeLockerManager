@@ -14,7 +14,6 @@ connection = pymysql.connect(host='192.168.11.140',
                              charset='utf8',
                              cursorclass=pymysql.cursors.DictCursor)
 
-
 # get recent data
 with connection.cursor() as cursor:
     sql = """select X.recordedTime, X.boxNo, X.status, X.lastIn, X.lastOut
@@ -22,23 +21,17 @@ with connection.cursor() as cursor:
              where X.recordedTime = Y.max AND X.boxNo = Y.boxNo;"""
     cursor.execute(sql)
     recentData = cursor.fetchall()
-    print(recentData)
 connection.close()
 
 for data in recentData:
-    print(data)
     shoeLocker.change_status_to(data)
-    shoeLocker.print_status()
-
 
 app = Flask(__name__, static_folder='.', static_url_path='')
 
 @app.route('/')
 def home():
-    return render_template('index.html', {'test': "Hello, world!"})
+    shoeLockerInfo = '<div></div>'
+    return render_template('index.html', data=recentData)
 
-@app.route('/echo/<thing>')
-def echo(thing):
-    return thing
 
-app.run(port=9998, debug=False)
+app.run(port=9999, debug=True)
