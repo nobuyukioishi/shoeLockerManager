@@ -11,7 +11,8 @@ small or one shoebox: smallShoeBox
 
 
 class ShoeLocker:
-    def __init__(self, row, col, def_value=(False, "0000-00-00 00:00:00"), rowHeight=28, colWidth=56, kernelSize=(56, 56)):
+    def __init__(self, row, col, def_value=("0000-00-00 00:00:00", 00, False, "0000-00-00 00:00:00", "0000-00-00 00:00:00"),
+                  rowHeight=28, colWidth=56, kernelSize=(56, 56)):
         """
         :param row: shoe locker's row
         :param col: shoe locker's column
@@ -21,24 +22,31 @@ class ShoeLocker:
         self.col = col
         self.rowHeight = rowHeight
         self.colWidth = colWidth
-        self.kernelSize = (56, 56)
+        self.kernelSize = kernelSize
         self.db_info = None
 
     def set_database_info(self, host, user, password, db, charset="utf8", cursorclass=pymysql.cursors.DictCursor):
         self.db_info = dict(host=host, user=user, password=password, db=db, charset=charset, cursorclass=cursorclass)
 
-    def change_status_to(self, x, y, status):
+    def change_status_to(self, kwargs):
         """
         :param x: row
         :param y: col
-        :param status: (True/False, time)
+        :param status: {'recordedTime': ,
+                        'boxNo': ,
+                        'status':,
+                        'lastIn':,
+                        'lastOut': }
         :return: None
         """
-        if type(status) != tuple:
-            print("status should be tuple object")
-            return
-
-        self.locker[x - 1][y - 1] = status
+        x = int(kwargs['boxNo'] / self.col)
+        y = kwargs['boxNo'] % self.row
+        self.locker[x][y] = {'recordedTime': kwargs['recordedTime'],
+                             'boxNo': kwargs['boxNo'],
+                             'status': kwargs['status'],
+                             'lastIn': kwargs['lastIn'],
+                             'lastOut': kwargs['lastOut']
+                            }
         return
 
     def print_status(self):
@@ -154,3 +162,4 @@ class ShoeLocker:
         connection.close()
 
         return
+

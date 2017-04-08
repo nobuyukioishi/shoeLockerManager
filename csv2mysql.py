@@ -11,13 +11,14 @@ with open('testCSVFile/sampleData.csv') as csv_file:
                                  charset='utf8',
                                  cursorclass=pymysql.cursors.DictCursor)
     for row in reader:
-        # print(row)
-
+        print(row)
+        '''
         with connection.cursor() as cursor:
             command = "insert into status (recordedTime,boxNo,status, lastIn,lastOut) values('"+row[0]+"'," \
                       + row[1] + "," + row[2] + ",'" + row[3] + "','" + row[4] + "')"
             print(command)
             cursor.execute(command)
             connection.commit()
+        '''
 
 connection.close()
