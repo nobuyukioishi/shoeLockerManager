@@ -11,8 +11,16 @@ small or one shoebox: smallShoeBox
 
 
 class ShoeLocker:
-    def __init__(self, row, col, def_value=("0000-00-00 00:00:00", 00, False, "0000-00-00 00:00:00", "0000-00-00 00:00:00"),
-                  rowHeight=28, colWidth=56, kernelSize=(56, 56)):
+    def __init__(self, row, col, 
+                def_value=(
+                    {'recordedTime': "0000-00-00 00:00:00",
+                     'boxNo': 0,
+                     'status': 0,
+                     'lastIn': "0000-00-00 00:00:00",
+                     'lastOut': "0000-00-00 00:00:00"
+                    }),
+                rowHeight=28, colWidth=56, kernelSize=(56, 56)
+                ):
         """
         :param row: shoe locker's row
         :param col: shoe locker's column
@@ -41,13 +49,41 @@ class ShoeLocker:
         """
         x = int(kwargs['boxNo'] / self.col)
         y = kwargs['boxNo'] % self.row
-        self.locker[x][y] = {'recordedTime': kwargs['recordedTime'],
-                             'boxNo': kwargs['boxNo'],
-                             'status': kwargs['status'],
-                             'lastIn': kwargs['lastIn'],
-                             'lastOut': kwargs['lastOut']
-                            }
-        return
+
+        # check if lastIn is setted
+        if kwargs['lastIn'] == -1:
+            # lastIn == 0
+            if self.locker[x][y]==1 and kwargs['status']==0:
+                # shoe has moved out, renew LastOut
+                self.locker[x][y] = {'recordedTime': kwargs['recordedTime'],
+                                     'boxNo': kwargs['boxNo'],
+                                     'status': kwargs['status'],
+                                     'lastIn': self.locker[x][y]['lastIn'],
+                                     'lastOut': kwargs['recordedTime']
+                                    }
+            elif self.locker[x][y]==0 and kwargs['status']==1:
+                # shoe has moved in, renew LastIn
+                self.locker[x][y] = {'recordedTime': kwargs['recordedTime'],
+                                     'boxNo': kwargs['boxNo'],
+                                     'status': kwargs['status'],
+                                     'lastIn': kwargs['recordedTime'],
+                                     'lastOut': self.locker[x][y]['lastOut']
+                                    }
+            else:
+                self.locker[x][y] = {'recordedTime': kwargs['recordedTime'],
+                                     'boxNo': kwargs['boxNo'],
+                                     'status': kwargs['status'],
+                                     'lastIn': kwargs['recordedTime'],
+                                     'lastOut': self.locker[x][y]['lastOut']
+                                    }  
+        else:
+            self.locker[x][y] = {'recordedTime': kwargs['recordedTime'],
+                                 'boxNo': kwargs['boxNo'],
+                                 'status': kwargs['status'],
+                                 'lastIn': kwargs['lastIn'],
+                                 'lastOut': kwargs['lastOut']
+                                }
+            return
 
     def print_status(self):
         for i in range(len(self.locker[0])):
@@ -126,14 +162,21 @@ class ShoeLocker:
             if predict > 0.8:
                 d = {'recordedTime': time,
                  'boxNo': index,
-                 'status': True
+                 'status': True, 
+                 'lastIn': -1,
+                 'lastOut': -1   
                  }
+                self.change_status_to(d)
                 time_stamped_predict_list.append(d)
+
             else:
                 d = {'recordedTime': time,
                  'boxNo': index,
-                 'status': False
+                 'status': False, 
+                 'lastIn': -1,
+                 'lastOut': -1  
                  }
+                self.change_status_to(d)
                 time_stamped_predict_list.append(d)
         return time_stamped_predict_list
 
