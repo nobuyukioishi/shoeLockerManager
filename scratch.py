@@ -32,14 +32,13 @@ connection = pymysql.connect(host='192.168.11.140',
                              cursorclass=pymysql.cursors.DictCursor)
 
 with connection.cursor() as cursor:
-    sql = "SELECT max(recordedTime), boxNo from info group by boxNo"
+    sql = ("select X.recordedTime, X.boxNo, X.status, X.lastIn, X.lastOut " 
+    "from info as X, (select max(recordedTime) as max, boxNo "
+    "from info group by boxNo) as Y "
+    "where X.recordedTime = Y.max AND X.boxNo = Y.boxNo;")
     cursor.execute(sql)
     results = cursor.fetchall()
     for r in results:
-        #dictionary of r
-        print(r)
-        print(r['boxNo'])
-        print(r['max(recordedTime)'])
-        # print("b=%s" % b)
-        # print("a=%s" % a)
+        
+connection.close();
 

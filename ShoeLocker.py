@@ -12,7 +12,7 @@ small or one shoebox: smallShoeBox
 
 
 class ShoeLocker:
-    def __init__(self, row, col, def_value=(False, "0000-00-00 00:00:00"), row_height=28, col_width=56,
+    def __init__(self, row, col, def_value=("0000-00-00 00:00:00", 0, 0, "0000-00-00 00:00:00", "0000-00-00 00:00:00"), row_height=28, col_width=56,
                  kernelSize=(56, 56)):
         """
         :param row: shoe locker's row
@@ -120,7 +120,7 @@ class ShoeLocker:
         # return predict_list
 
         time_stamped_predict_list = []
-        time = '{0:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now())
+        time = '{0:%Y-%m-%d %H:%M:%S}'.format(datetime.now())
         for index, predict in enumerate(predict_list):
 
             if predict > 0.8:
@@ -143,53 +143,57 @@ class ShoeLocker:
         connection = pymysql.connect(**self.config)
 
         with connection.cursor() as cursor:
-
             command = "insert into "+self.table_name+" (recordedTime,boxNo,status,lastIn,lastOut) values(now(),"+str(box_no)+","+str(status)+",'"+str(last_in)+"','"+str(last_out)+"')"
-
             cursor.execute(command)
             connection.commit()
-
         connection.close();
 
         return
 
-    def push_many_status(self, time_stamped_predict_list):
-        """
+#     def push_many_status(self, time_stamped_predict_list):
+#         """
 
-        :param time_stamped_predict_list: new information of shoeBox.
-        :return 
-        """
+#         :param time_stamped_predict_list: new information of shoeBox.
+#         :return 
+#         """
+#         connection = pymysql.connect(**self.config)
 
-        connection = pymysql.connect(**self.config)
+#         # TODO: get most new status of each shoebox
+#         with connection.cursor() as cursor:
+#             sql = "select X.recordedTime, X.boxNo, X.status, X.lastIn, X.lastOut "
+#                     + "from info as X, (select max(recordedTime) as max, boxNo "
+#                                         + "from info group by boxNo) as Y "
+#                                         + "where X.recordedTime = Y.max AND X.boxNo = Y.boxNo;"
+#             cursor.execute(sql)
+#             results = cursor.fetchall()
 
-        # TODO: get most new status of each shoebox
-        with connection.cursor() as cursor:
-            sql = "SELECT max(recordedTime), boxNo from info group by boxNo"
-            cursor.execute(sql)
-            results = cursor.fetchall()
-            for r in results:
-                #dictionary of r
-                print(r)
-                print(r['boxNo'])
-                print(r['max(recordedTime)'])
-        connection.close();
+#         for predicted_record in time_stamped_predict_list:
 
-        # TODO: make new records by loop
-        with connection.cursor() as cursor:
-            # make new record
-            names = ()
-            # append tuple
-            # name = name + (('yea', 'oh yea'),)
-            # name = name + (('yea', 'oh yea'),)
-            # name = name + (('yea', 'oh yea'),)
-            # name = (('now()', boxNo, status, lastIn, lastOut),)
-            stmt_insert = "INSERT INTO "+self.table_name+" (recordedTime,boxNo,status,lastIn,lastOut) VALUES (%s, %s, %s, %s, %s)"
-            cursor.executemany(stmt_insert, names)
-            connection.commit()
 
-        connection.close();
 
-        return
+# # 'lastIn': datetime.datetime(2016, 11, 11, 0, 11, 11), 
+# #'boxNo': 8, 
+# #'recordedTime': datetime.datetime(2017, 4, 8, 7, 12, 54), 
+# #'status': 0, 
+# #'lastOut': datetime.datetime(2017, 11, 11, 0, 11, 11)
+
+#         # TODO: make new records by loop
+#         with connection.cursor() as cursor:
+#             # make new record
+#             names = ()
+#             # append tuple
+#             # name = name + (('yea', 'oh yea'),)
+#             # name = name + (('yea', 'oh yea'),)
+#             # name = name + (('yea', 'oh yea'),)
+#             # name = (('now()', boxNo, status, lastIn, lastOut),)
+#             stmt_insert = "INSERT INTO "+self.table_name+" (recordedTime,boxNo,status,lastIn,lastOut) VALUES (%s, %s, %s, %s, %s)"
+#             cursor.executemany(stmt_insert, names)
+#             connection.commit()
+
+#         connection.close();
+
+#         return
+
 
 
 
