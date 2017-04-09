@@ -11,8 +11,18 @@ small or one shoebox: smallShoeBox
 
 
 class ShoeLocker:
-    def __init__(self, row, col, def_value=("0000-00-00 00:00:00", 00, False, "0000-00-00 00:00:00", "0000-00-00 00:00:00"),
-                  rowHeight=28, colWidth=56, kernelSize=(56, 56)):
+
+    def __init__(self, row, col, 
+                    def_value=(
+                        {'recordedTime': "0000-00-00 00:00:00",
+                         'boxNo': 0,
+                         'status': 0,
+                         'lastIn': "0000-00-00 00:00:00",
+                         'lastOut': "0000-00-00 00:00:00"
+                        }),
+                    row_height=28, col_width=56, kernel_size=(56, 56)
+                ):
+
         """
         :param row: shoe locker's row
         :param col: shoe locker's column
@@ -20,10 +30,11 @@ class ShoeLocker:
         self.locker = [[def_value for i in range(col)] for j in range(row)]
         self.row = row
         self.col = col
-        self.rowHeight = rowHeight
-        self.colWidth = colWidth
-        self.kernelSize = kernelSize
-        self.db_info = None
+
+        self.row_height = row_height
+        self.col_width = col_width
+        self.kernel_size = (56, 56)
+        self.table_name = 'info'
 
     def set_database_info(self, host, user, password, db, charset="utf8", cursorclass=pymysql.cursors.DictCursor):
         self.db_info = dict(host=host, user=user, password=password, db=db, charset=charset, cursorclass=cursorclass)
@@ -41,13 +52,41 @@ class ShoeLocker:
         """
         x = int(kwargs['boxNo'] / self.col)
         y = kwargs['boxNo'] % self.row
-        self.locker[x][y] = {'recordedTime': kwargs['recordedTime'],
-                             'boxNo': kwargs['boxNo'],
-                             'status': kwargs['status'],
-                             'lastIn': kwargs['lastIn'],
-                             'lastOut': kwargs['lastOut']
-                            }
-        return
+
+        # check if lastIn is setted
+        if kwargs['lastIn'] == -1:
+            # lastIn == 0
+            if self.locker[x][y]==1 and kwargs['status']==0:
+                # shoe has moved out, renew LastOut
+                self.locker[x][y] = {'recordedTime': kwargs['recordedTime'],
+                                     'boxNo': kwargs['boxNo'],
+                                     'status': kwargs['status'],
+                                     'lastIn': self.locker[x][y]['lastIn'],
+                                     'lastOut': kwargs['recordedTime']
+                                    }
+            elif self.locker[x][y]==0 and kwargs['status']==1:
+                # shoe has moved in, renew LastIn
+                self.locker[x][y] = {'recordedTime': kwargs['recordedTime'],
+                                     'boxNo': kwargs['boxNo'],
+                                     'status': kwargs['status'],
+                                     'lastIn': kwargs['recordedTime'],
+                                     'lastOut': self.locker[x][y]['lastOut']
+                                    }
+            else:
+                self.locker[x][y] = {'recordedTime': kwargs['recordedTime'],
+                                     'boxNo': kwargs['boxNo'],
+                                     'status': kwargs['status'],
+                                     'lastIn': kwargs['recordedTime'],
+                                     'lastOut': self.locker[x][y]['lastOut']
+                                    }  
+        else:
+            self.locker[x][y] = {'recordedTime': kwargs['recordedTime'],
+                                 'boxNo': kwargs['boxNo'],
+                                 'status': kwargs['status'],
+                                 'lastIn': kwargs['lastIn'],
+                                 'lastOut': kwargs['lastOut']
+                                }
+            return
 
     def print_status(self):
         for i in range(len(self.locker[0])):
@@ -88,18 +127,18 @@ class ShoeLocker:
         # affine transformation
         # points of target rectangle
         pts1 = np.float32([self.x1x1, self.x1y2, self.x2y1, self.x2y2])
-        pts2 = np.float32([[0, 0], [self.col * self.colWidth, 0], [0, self.row * self.rowHeight],
-                           [self.col * self.colWidth, self.row * self.rowHeight]])
+        pts2 = np.float32([[0, 0], [self.col * self.col_width, 0], [0, self.row * self.row_height],
+                           [self.col * self.col_width, self.row * self.row_height]])
         M = cv2.getPerspectiveTransform(pts1, pts2)
-        warpedImg = cv2.warpPerspective(img, M, (self.col * self.colWidth, self.row * self.colWidth))
+        warpedImg = cv2.warpPerspective(img, M, (self.col * self.col_width, self.row * self.col_width))
 
         # save image for shoeBox
         for i in range(0, self.row):
             for j in range(0, self.col):
-                shoeBox = warpedImg[i * self.rowHeight: (i + 1) * self.rowHeight,
-                          j * self.colWidth: (j + 1) * self.colWidth]
+                shoeBox = warpedImg[i * self.row_height: (i + 1) * self.row_height,
+                          j * self.col_width: (j + 1) * self.col_width]
                 # because current picture size is 28*56, to feed 56*56 kernel, we will resize it
-                CubicImg = cv2.resize(shoeBox, self.kernelSize)
+                CubicImg = cv2.resize(shoeBox, self.kernel_size)
                 cv2.imwrite('temp/box%s.png' % (i * self.col + j), CubicImg)
 
         return self.row * self.col
@@ -111,7 +150,7 @@ class ShoeLocker:
         """
 
         if count != self.row * self.col:
-            print("count!=row*col")
+            print("count != row * col")
 
         # get shoe np array
         shoesArray = pic_to_np_array(count)
@@ -121,16 +160,30 @@ class ShoeLocker:
         # return predict_list
 
         time_stamped_predict_list = []
-        time = '{0:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now())
+        time = '{0:%Y-%m-%d %H:%M:%S}'.format(datetime.now())
         for index, predict in enumerate(predict_list):
-            # index = i * self.col + j
-            i = int(index / self.col)
-            j = int(index - i * self.col)
+
             if predict > 0.8:
-                time_stamped_predict_list.append((i, j, (True, time)))
+                d = {'recordedTime': time,
+                 'boxNo': index,
+                 'status': True, 
+                 'lastIn': -1,
+                 'lastOut': -1   
+                 }
+                self.change_status_to(d)
+                time_stamped_predict_list.append(d)
+
             else:
-                time_stamped_predict_list.append((i, j, (False, time)))
+                d = {'recordedTime': time,
+                 'boxNo': index,
+                 'status': False, 
+                 'lastIn': -1,
+                 'lastOut': -1  
+                 }
+                self.change_status_to(d)
+                time_stamped_predict_list.append(d)
         return time_stamped_predict_list
+
 
     def push_status(self, box_no, status, last_in, last_out):
         """
@@ -141,6 +194,7 @@ class ShoeLocker:
         :param lastOut:
         :return:
         """
+
 
         if self.db_info is None:
             print("ERROR! You should execute set_database_info() before use this method!")
@@ -154,14 +208,15 @@ class ShoeLocker:
                                      cursorclass=self.db_info['cursorclass'])
 
         with connection.cursor() as cursor:
-            command = "insert into status (recordedTime,boxNo,status, lastIn,lastOut) values(now()," \
+            command = "insert into "+self.table_name+" (recordedTime,boxNo,status,lastIn,lastOut) values(now()," \
                       + str(box_no)+","+status+",'"+str(last_in)+"','"+str(last_out)+"')"
-            # print(command)
+
             cursor.execute(command)
             connection.commit()
         connection.close()
 
         return
+
 
     def get_recent_data(self):
         connection = pymysql.connect(host=self.db_info['host'],
@@ -178,3 +233,4 @@ class ShoeLocker:
             data = cursor.fetchall()
         connection.close()
         return data
+
