@@ -7,34 +7,30 @@ import time
 # stick this datetime format '{0:%Y-%m-%d %H:%M:%S}'
 
 shoeLocker = ShoeLocker(row=3, col=3)
-shoeLocker.set_database_info(host='192.168.11.140',
+shoeLocker.set_database_info(host='192.168.11.184',
                              user='piyo',
                              password='PassWord123@',
                              db='shoeLockerManager',
                              charset='utf8',
                              cursorclass=pymysql.cursors.DictCursor)
 
-shoeLocker.print_status()
+# shoeLocker.print_status()
 # kwargs ={'recordedTime': datetime.datetime.now(),
 #                                  'boxNo': 1,
 #                                  'status': 0,
 #                                  'lastIn': datetime.datetime.now(),
 #                                  'lastOut': datetime.datetime.now()
 #                                 }
-# shoeLocker.save_raspi_pic()
 
-
-
-
-# shoeLocker.change_status_to(kwargs)
-# shoeLocker.print_status()
+shoeLocker.save_raspi_pic()
 x = ([99, 30], [425, 39], [108, 349], [406, 350])
 shoeLocker.change_locker_edge_points_to(shoeBoxEdgePoints=x)
 count = shoeLocker.dissemble_big_shoe_box(raspi_im="recent.jpg")
 shoeLocker.get_state(count)
-shoeLocker.print_status()
-
 shoeLocker.push_many_status()
+
+# shoeLocker.change_status_to(kwargs)
+# shoeLocker.print_status()
 
 
 # ShoeLocker.push_status(10, 1,"2017-11-11 11:11:11", "2017-11-11 11:11:11")

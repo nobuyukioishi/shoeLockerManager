@@ -90,7 +90,7 @@ def save_picture(self, ip_address="192.168.11.213"):
     time = datetime.datetime.today()
 
     directory = "images/" + str(time.year) + "_" + str(time.month) + "_" + str(time.day)
-    savename = str(time.year) + "_" + str(time.month) + "_" + str(time.day) + "/" \
+    savename = "images/" + str(time.year) + "_" + str(time.month) + "_" + str(time.day) + "/" \
             + str(time.hour) + "_" + str(time.minute) + "_" + str(time.second) + ".png"
     print(savename)
 
