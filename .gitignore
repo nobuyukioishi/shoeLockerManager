@@ -1,3 +1,5 @@
 */*.pyc 
 *.pyc 
 temp/box*
+.DS_Store
+images/*

@@ -217,19 +217,19 @@ class ShoeLocker:
         Push locker variables to Database
         """
 
+
         if self.db_info is None:
             print("ERROR! You should execute set_database_info() before use this method!")
             exit()
 
-
         connection = pymysql.connect(host=self.db_info['host'],
-                                     user=self.db_info['user'],
-                                     password=self.db_info['password'],
-                                     db=self.db_info['db'],
-                                     charset=self.db_info['charset'],
-                                     cursorclass=self.db_info['cursorclass'])
+                             user=self.db_info['user'],
+                             password=self.db_info['password'],
+                             db=self.db_info['db'],
+                             charset=self.db_info['charset'],
+                             cursorclass=self.db_info['cursorclass'])
 
-         # TODO: make new records by loop
+        # TODO: make new records by loop
         with connection.cursor() as cursor:
             # make new record
             bigCommand = ()
@@ -250,8 +250,29 @@ class ShoeLocker:
             stmt_insert = "INSERT INTO "+self.table_name+" (recordedTime,boxNo,status,lastIn,lastOut) VALUES (%s, %s, %s, %s, %s)"
             cursor.executemany(stmt_insert, bigCommand)
             connection.commit()
-
         return 
+
     def save_raspi_pic(self, ip_address="192.168.11.213"):
         save_picture("192.168.11.213")
         return
+
+    def get_recent_data(self):
+        if self.db_info is None:
+            print("ERROR! You should execute set_database_info() before use this method!")
+            exit()
+
+        connection = pymysql.connect(host=self.db_info['host'],
+                                     user=self.db_info['user'],
+                                     password=self.db_info['password'],
+                                     db=self.db_info['db'],
+                                     charset=self.db_info['charset'],
+                                     cursorclass=self.db_info['cursorclass'])
+
+        with connection.cursor() as cursor:
+            sql = """select X.recordedTime, X.boxNo, X.status, X.lastIn, X.lastOut
+                     from info as X, (select max(recordedTime) as max, boxNo from info group by boxNo) as Y
+                     where X.recordedTime = Y.max AND X.boxNo = Y.boxNo;"""
+            cursor.execute(sql)
+            data = cursor.fetchall()
+        connection.close()
+        return data
