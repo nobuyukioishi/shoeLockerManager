@@ -252,3 +252,6 @@ class ShoeLocker:
             connection.commit()
 
         return 
+    def save_raspi_pic(self, ip_address="192.168.11.213"):
+        save_picture("192.168.11.213")
+        return
