@@ -2,32 +2,38 @@
 <head>
   <title>Sample</title>
   <link rel="stylesheet" type="text/css" href="templates/css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="templates/css/style.css?q=11112341234141234">
+  <link rel="stylesheet" type="text/css" href="templates/css/style.css?q=11112341234s">
 </head>
 </body>
 <div id="wrapper">
-  <script type="text/JavaScript">
-  <!--
-  var DWs = new Array('Sun.','Mon.','Tue.','Wed.','Thu.','Fri.','Sat.');
-  var Now = new Date();
-  var YY = Now.getYear();
-  var MM = Now.getMonth() + 1;
-  var DD = Now.getDate();
-  var DW = DWs[ Now.getDay() ];
-  var hh = Now.getHours();
-  var mm = Now.getMinutes();
-  var ss = Now.getSeconds();
+  <p id="curtime">{{ now }}</p>
+  {% for i in range(row) %}
+  <div class="row{{ i }}">
+    {% for j in range(col) %}
+    <div class="col{{ j }}" id="box{{ i }}">
+      {% set tmp = data[j]['boxNo'] %}
+      <p class="boxNo">No: {{ tmp }} </p>
+      {% set tmp = data[j]['status'] %}
+      {% if tmp == 1 %}
+        <p class="status">True</p>
+      {% else %}
+        <p class="status"App/sampleApp.py:16>False</p>
+      {% endif %}
+      {% if tmp == 1 %}
+        {% set tmp = data[j]['lastIn'] %}
+        <p class="lastIn">Since: {{ tmp }}</p>
+      {% else %}
+        {% set tmp = data[j]['lastOut'] %}
+        <p class="lastOut">Since: {{ tmp }}</p>
+      {% endif %}
+      {% set tmp = data[j]['recordedTime'] %}
+      <p class="recordedTime">{{ tmp }}</p>
+    </div>
+    {% endfor %}
+  </div>
+  {% endfor %}
 
-  if(YY < 2000) { YY += 1900; }
-
-  if(MM < 10) { MM = "0" + MM; }
-  if(DD < 10) { DD = "0" + DD; }
-  if(hh < 10) { hh = "0" + hh; }
-  if(mm < 10) { mm = "0" + mm; }
-  if(ss < 10) { ss = "0" + ss; }
-  document.write('<p id="curtime">' + YY + '.' + MM + '.' + DD + ' ' + DW + ' ' + hh + ':' + mm + ':' + ss + ' </p>');
-  // -->
-  </script>
+<!--
   <div class="row0">
       <div class="col0" id="box0">
         <p class="boxNo">No: {{data[0]['boxNo']}}</p>
@@ -162,5 +168,6 @@
       <p class="recordedTime">{{data[8]['recordedTime']}}</p>
     </div>
   </div>
+-->
 </body>
 </html>
