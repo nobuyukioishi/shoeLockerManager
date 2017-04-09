@@ -1,6 +1,6 @@
 #wrapper {
-  width: 70%;
-  background: #dddddd;
+  width: 90%;
+  background: ;
   margin: 0 auto;
   text-align: center;
   padding: 10px;
@@ -19,7 +19,7 @@
   border: 1px;
   width: 32%;
   border-style: solid;
-  border-color: orange;
+  border-color: #dddddd;
   text-align: center;
   height: 100%;
 }
