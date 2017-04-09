@@ -163,3 +163,18 @@ class ShoeLocker:
 
         return
 
+    def get_recent_data(self):
+        connection = pymysql.connect(host=self.db_info['host'],
+                                     user=self.db_info['user'],
+                                     password=self.db_info['password'],
+                                     db=self.db_info['db'],
+                                     charset=self.db_info['charset'],
+                                     cursorclass=self.db_info['cursorclass'])
+        with connection.cursor() as cursor:
+            sql = """select X.recordedTime, X.boxNo, X.status, X.lastIn, X.lastOut
+                     from info as X, (select max(recordedTime) as max, boxNo from info group by boxNo) as Y
+                     where X.recordedTime = Y.max AND X.boxNo = Y.boxNo;"""
+            cursor.execute(sql)
+            data = cursor.fetchall()
+        connection.close()
+        return data

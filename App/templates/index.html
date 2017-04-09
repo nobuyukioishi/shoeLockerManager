@@ -11,22 +11,22 @@
   <div class="row{{ i }}">
     {% for j in range(col) %}
     <div class="col{{ j }}" id="box{{ i }}">
-      {% set tmp = data[j]['boxNo'] %}
+      {% set tmp = data[j+row*i]['boxNo'] %}
       <p class="boxNo">No: {{ tmp }} </p>
-      {% set tmp = data[j]['status'] %}
+      {% set tmp = data[j+row*i]['status'] %}
       {% if tmp == 1 %}
         <p class="status">True</p>
       {% else %}
         <p class="status"App/sampleApp.py:16>False</p>
       {% endif %}
       {% if tmp == 1 %}
-        {% set tmp = data[j]['lastIn'] %}
+        {% set tmp = data[j+row*i]['lastIn'] %}
         <p class="lastIn">Since: {{ tmp }}</p>
       {% else %}
-        {% set tmp = data[j]['lastOut'] %}
+        {% set tmp = data[j+row*i]['lastOut'] %}
         <p class="lastOut">Since: {{ tmp }}</p>
       {% endif %}
-      {% set tmp = data[j]['recordedTime'] %}
+      {% set tmp = data[j+row*i]['recordedTime'] %}
       <p class="recordedTime">{{ tmp }}</p>
     </div>
     {% endfor %}
