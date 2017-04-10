@@ -1,0 +1,65 @@
+#wrapper {
+  width: 90%;
+  background: ;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+}
+
+
+.row0, .row1, .row2 {
+  margin: 0 auto;
+  height: 100px;
+  width: 90%
+}
+
+
+.col0, .col1, .col2 {
+  float: left;
+  border: 1px;
+  width: 32%;
+  border-style: solid;
+  border-color: #dddddd;
+  text-align: center;
+  height: 100%;
+}
+
+#curtime {
+  padding: 10px 0;
+}
+
+#lastupdated {
+  padding: 10px 0;
+}
+
+.recordedTime, .boxNo, .status, .lastIn, .lastOut {
+  margin: 0;
+  padding: 0;
+}
+
+.boxNo {
+  text-align: left;
+  margin: 5px;
+}
+
+.recordedTime {
+  font-size: 10px;
+  text-align: right;
+  margin: 0 3px 3px 0;
+}
+
+.status {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.lastIn, .lastOut {
+  font-size: 15px;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
