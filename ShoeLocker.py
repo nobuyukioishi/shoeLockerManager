@@ -158,6 +158,8 @@ class ShoeLocker:
         time = '{0:%Y-%m-%d %H:%M:%S}'.format(datetime.now())
         for index, predict in enumerate(predict_list):
 
+            print("indexNo= ",index,"Accuracy= ",predict)
+
             if predict > 0.8:
                 d = {'recordedTime': time,
                  'boxNo': index,
