@@ -47,15 +47,20 @@ def predictShoe(shoeArray):
     # 1. load model
     json_string = open(os.path.join(f_model, model_filename)).read()
     model = model_from_json(json_string)
-    sgd = SGD(lr=1e-2, decay=1e-6, momentum=0.9, nesterov=True)
+    # sgd = SGD(lr=1e-2, decay=1e-6, momentum=0.9, nesterov=True)
 
-    # set compiler
-    model.compile(loss='mean_squared_error',
-                  optimizer=sgd,
-                  metrics=['accuracy'])
+    # # set compiler
+    # model.compile(loss='mean_squared_error',
+    #               optimizer=sgd,
+    #               metrics=['accuracy'])
+    model.compile(loss='binary_crossentropy',
+              optimizer='rmsprop',
+              metrics=['accuracy'])
+
     model.load_weights(os.path.join(f_model, weights_filename))
 
     # 3. predict certainty
+    # probability = model.predict_proba(shoeArray, batch_size=26, verbose=0)
     probability = model.predict(shoeArray, batch_size=26, verbose=0)
     return probability
 
@@ -74,7 +79,7 @@ def get_bigShoeBox_array(x, y, height, width, raspi_im="temp/raspi_pic.jpg"):
     cv2.imshow("cropped", crop_img)
     cv2.waitKey(0)
     #turn crop image to np array
-    npImage = np.asarray(crop_img)
+    npImage = np.asarray(crop_img) 
     # npImage=npImage*(1./255)
     # npImage=np.swapaxes(npImage,0,2)
     # npImage=np.swapaxes(npImage,1,2)
