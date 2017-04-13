@@ -7,7 +7,7 @@ from ShoeLocker import ShoeLocker
 
 shoeLocker = ShoeLocker(3, 3)
 
-shoeLocker.set_database_info(host='192.168.11.184',
+shoeLocker.set_database_info(host='192.168.88.14',
                              user='piyo',
                              password='PassWord123@',
                              db='shoeLockerManager',
@@ -20,7 +20,8 @@ app = Flask(__name__, static_folder='.', static_url_path='')
 @app.route('/')
 def home():
     shoeLocker.save_raspi_pic()
-    x = ([99, 30], [425, 39], [108, 349], [406, 350])
+    # x = ([99, 30], [425, 39], [108, 349], [406, 350])
+    x = ([124, 96], [415, 91], [115, 356], [409, 366])
     shoeLocker.change_locker_edge_points_to(shoeBoxEdgePoints=x)
     count = shoeLocker.dissemble_big_shoe_box(raspi_im="recent.jpg")
     shoeLocker.get_state(count)
