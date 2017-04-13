@@ -30,7 +30,7 @@ x = ([124, 96], [415, 91], [115, 356], [409, 366])
 shoeLocker.change_locker_edge_points_to(shoeBoxEdgePoints=x)
 count = shoeLocker.dissemble_big_shoe_box(raspi_im="recent.jpg")
 shoeLocker.get_state(count)
-shoeLocker.push_many_status()
+#shoeLocker.push_many_status()
 
 # shoeLocker.change_status_to(kwargs)
 # shoeLocker.print_status()

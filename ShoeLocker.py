@@ -255,7 +255,7 @@ class ShoeLocker:
         return 
 
     def save_raspi_pic(self, ip_address="192.168.11.213"):
-        save_picture("192.168.11.213")
+        save_picture(ip_address)
         return
 
     def get_recent_data(self):
