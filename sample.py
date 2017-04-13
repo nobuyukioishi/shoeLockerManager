@@ -21,7 +21,7 @@ shoeLocker.set_database_info(host='192.168.11.184',
 #                                  'lastIn': datetime.datetime.now(),
 #                                  'lastOut': datetime.datetime.now()
 #                                 }
-
+#get raspi from 192.168.11.213/image.jpg
 shoeLocker.save_raspi_pic()
 # shoebox edge points
 # x = ([99, 30], [425, 39], [108, 349], [406, 350]) 
