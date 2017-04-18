@@ -76,7 +76,7 @@ class ShoeLocker:
                 self.locker[x][y] = {'recordedTime': kwargs['recordedTime'],
                                      'boxNo': kwargs['boxNo'],
                                      'status': kwargs['status'],
-                                     'lastIn': kwargs['recordedTime'],
+                                     'lastIn': self.locker[x][y]['lastIn'],
                                      'lastOut': self.locker[x][y]['lastOut']
                                     }  
         else:
