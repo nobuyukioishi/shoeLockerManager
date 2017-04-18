@@ -34,9 +34,9 @@ def home():
 
     return render_template('index.html',
                            now='{0:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now()),
-                           data=sorted(data, key = lambda x:x['boxNo']),
+                           data=sorted(data, key=lambda x: x['boxNo']),
                            col=shoeLocker.col,
                            row=shoeLocker.row,
-                           randomNo=random.randint(0,100000))
+                           randomNo=random.randint(0, 100000))
 
 app.run(host="0.0.0.0", debug=True)
