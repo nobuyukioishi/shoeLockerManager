@@ -31,8 +31,6 @@ def home():
     # shoeLocker.push_many_status()
 
     data = shoeLocker.get_recent_data()
-    for tmp in data:
-        shoeLocker.change_status_to(tmp)
 
     return render_template('index.html',
                            now='{0:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now()),
