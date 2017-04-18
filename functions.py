@@ -85,26 +85,26 @@ def get_bigShoeBox_array(x, y, height, width, raspi_im="temp/raspi_pic.jpg"):
     # npImage=np.swapaxes(npImage,1,2)
     return npImage
 
-def save_picture(self, ip_address="192.168.11.213"):
-    """
-    Save picture from raspi
-    :param ip_address
-    :param save_dir
-    :return True, False
-    """
-    time = datetime.datetime.today()
-
-    directory = "images/" + str(time.year) + "_" + str(time.month) + "_" + str(time.day)
-    savename = "images/" + str(time.year) + "_" + str(time.month) + "_" + str(time.day) + "/" \
-            + str(time.hour) + "_" + str(time.minute) + "_" + str(time.second) + ".png"
-    print(savename)
-
-    if not os.path.exists(directory):
-        os.makedirs(directory)
-        
-    url= "http://" + ip_address + "/image.jpg"
-    response = requests.get(url)
-    img = Image.open(BytesIO(response.content))
-    img.save(savename)
-    img.save("recent.jpg")
+# def save_picture(self, ip_address="192.168.11.213"):
+#     """
+#     Save picture from raspi
+#     :param ip_address
+#     :param save_dir
+#     :return True, False
+#     """
+#     time = datetime.datetime.today()
+#
+#     directory = "images/" + str(time.year) + "_" + str(time.month) + "_" + str(time.day)
+#     savename = "images/" + str(time.year) + "_" + str(time.month) + "_" + str(time.day) + "/" \
+#             + str(time.hour) + "_" + str(time.minute) + "_" + str(time.second) + ".png"
+#     print(savename)
+#
+#     if not os.path.exists(directory):
+#         os.makedirs(directory)
+#
+#     url= "http://" + ip_address + "/image.jpg"
+#     response = requests.get(url)
+#     img = Image.open(BytesIO(response.content))
+#     img.save(savename)
+#     img.save("recent.jpg")
 

@@ -107,16 +107,16 @@ class ShoeLocker:
         self.x1x1, self.x1y2, self.x2y1, self.x2y2 = shoeBoxEdgePoints
         return
 
-    def dissemble_big_shoe_box(self, raspi_im="temp/raspi_pic.jpg"):
+    def divide_big_shoe_box(self, latest_pic):
         """
-        :param raspi_im: Name of picture to dissemble, this time raspi_im
-        :return count: number of dissembled picture
-        Save dissembled pictures to temp/, names box%s.png %s is integer goes 0 to count-1
+        :param latest_pic: Name of picture to dissemble, this time latest_pic
+        Save dissembled pictures to temp/, names box%s.png %s is integer goes 0 to row * col
         """
 
-        img = cv2.imread(raspi_im)
-        if raspi_im is None:
-            print("Cannot find image %s", raspi_im)
+
+        img = cv2.imread(latest_pic)
+        if latest_pic is None:
+            print("Cannot find image %s", latest_pic)
             return -1
         # affine transformation
         # points of target rectangle
@@ -135,21 +135,16 @@ class ShoeLocker:
                 CubicImg = cv2.resize(shoeBox, self.kernel_size)
                 cv2.imwrite('temp/box%s.png' % (i * self.col + j), CubicImg)
 
-        return self.row * self.col
+        return True
 
-    def get_state(self, count=int):
+    def get_state(self):
         """
         Saves object
-        :param count: number of a shoe locker's images
         :return: list of tuple (predict, time) for each shoe locker's state
-
         """
 
-        if count != self.row * self.col:
-            print("count != row * col")
-
         # get shoe np array
-        shoes_arrays = pic_to_np_array(count)
+        shoes_arrays = pic_to_np_array(self.row * self.col)
         # predict arrays
         predict_list = predictShoe(shoes_arrays)
 
@@ -254,9 +249,9 @@ class ShoeLocker:
             connection.commit()
         return 
 
-    def save_raspi_pic(self, ip_address="192.168.11.213"):
-        save_picture(ip_address)
-        return
+    # def save_raspi_pic(self, ip_address="192.168.11.213"):
+    #     save_picture(ip_address)
+    #     return
 
     def get_recent_data(self):
         if self.db_info is None:

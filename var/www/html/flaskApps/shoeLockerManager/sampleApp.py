@@ -23,7 +23,7 @@ def home():
     # x = ([99, 30], [425, 39], [108, 349], [406, 350])
     x = ([124, 96], [415, 91], [115, 356], [409, 366])
     shoeLocker.change_locker_edge_points_to(shoeBoxEdgePoints=x)
-    count = shoeLocker.dissemble_big_shoe_box(raspi_im="recent.jpg")
+    count = shoeLocker.divide_big_shoe_box(latest_pic="recent.jpg")
     shoeLocker.get_state(count)
     shoeLocker.push_many_status()
 
