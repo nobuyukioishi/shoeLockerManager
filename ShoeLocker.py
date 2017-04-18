@@ -56,15 +56,15 @@ class ShoeLocker:
         # check if lastIn is setted
         if kwargs['lastIn'] == -1:
             # lastIn == 0
-            if self.locker[x][y]==1 and kwargs['status']==0:
+            if self.locker[x][y]['status']==1 and kwargs['status']==0:
                 # shoe has moved out, renew LastOut
-                self.locker[x][y] = {'recordedTime': kwargs['recordedTime'],
+                self.locker[x][y]['status'] = {'recordedTime': kwargs['recordedTime'],
                                      'boxNo': kwargs['boxNo'],
                                      'status': kwargs['status'],
                                      'lastIn': self.locker[x][y]['lastIn'],
                                      'lastOut': kwargs['recordedTime']
                                     }
-            elif self.locker[x][y]==0 and kwargs['status']==1:
+            elif self.locker[x][y]['status']==0 and kwargs['status']==1:
                 # shoe has moved in, renew LastIn
                 self.locker[x][y] = {'recordedTime': kwargs['recordedTime'],
                                      'boxNo': kwargs['boxNo'],
