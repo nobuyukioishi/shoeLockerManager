@@ -24,11 +24,11 @@ def home():
     # shoeLocker.save_raspi_pic()
 
     # x = ([99, 30], [425, 39], [108, 349], [406, 350])
-    x = ([124, 96], [415, 91], [115, 356], [409, 366])
-    shoeLocker.change_locker_edge_points_to(shoeBoxEdgePoints=x)
-    shoeLocker.divide_big_shoe_box(latest_pic="latest_pic.jpg")
-    shoeLocker.get_state()
-    shoeLocker.push_many_status()
+    # x = ([124, 96], [415, 91], [115, 356], [409, 366])
+    # shoeLocker.change_locker_edge_points_to(shoeBoxEdgePoints=x)
+    # shoeLocker.divide_big_shoe_box(latest_pic="latest_pic.jpg")
+    # shoeLocker.get_state()
+    # shoeLocker.push_many_status()
 
     data = shoeLocker.get_recent_data()
     for tmp in data:
