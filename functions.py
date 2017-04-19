@@ -92,7 +92,6 @@ def check_image(image):
     else:
         return False
 
-@staticmethod
 def save_to_folder_func(image="latest_pic.jpg"):
     """
     Save image to image_backup folder /images

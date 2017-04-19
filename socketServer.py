@@ -41,9 +41,9 @@ while True:
             shoeLocker.push_many_status()
         except:
             print("failed push_many_status")
-        try: 
-            shoeLocker.save_to_folder(image="latest_pic.jpg")
-        except:
-            print("failed on save to folder")
+        #try: 
+        shoeLocker.save_to_folder(image="latest_pic.jpg")
+        #except:
+        #    print("failed on save to folder")
     else:
         print("Returned false from is_pic_good, ignoring this loop . . .")
