@@ -90,3 +90,23 @@ def check_image(image):
         return True
     else:
         return False
+
+@staticmethod
+def save_to_folder_func(image="latest_pic.jpg"):
+    """
+    Save image to image_backup folder /images
+    :param image: name of image
+    """
+    time = datetime.datetime.today()
+
+    directory = "images/" + str(time.year) + "_" + str(time.month) + "_" + str(time.day)
+    savename = "images/" + str(time.year) + "_" + str(time.month) + "_" + str(time.day) + "/" \
+            + str(time.hour) + "_" + str(time.minute) + "_" + str(time.second) + ".png"
+    print(savename)
+
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+        
+    img = Image.open(image)
+    img.save(savename)
+
