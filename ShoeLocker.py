@@ -294,3 +294,7 @@ class ShoeLocker:
             return True
         else:
             return False
+
+    @staticmethod
+    def save_to_folder(image):
+        save_to_folder_func(image)
