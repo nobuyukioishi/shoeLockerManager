@@ -23,7 +23,7 @@ def home():
     # shoeLocker.save_raspi_pic()
 
     x = ([99, 30], [425, 39], [108, 349], [406, 350])
-    shoeLocker.change_locker_edge_points_to(shoeBoxEdgePoints=x)
+    shoeLocker.change_locker_edge_points_to(shoe_box_edge_points=x)
     shoeLocker.divide_big_shoe_box(latest_pic="latest_pic.jpg")
     shoeLocker.get_state()
     shoeLocker.push_many_status()

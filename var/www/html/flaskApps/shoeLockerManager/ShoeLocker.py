@@ -151,7 +151,7 @@ class ShoeLocker:
         # get shoe np array
         shoes_arrays = pic_to_np_array(count)
         # predict arrays
-        predict_list = predictShoe(shoes_arrays)
+        predict_list = predict_shoe(shoes_arrays)
 
         # set state of each box by using change_status_to
         time_stamped_predict_list = []
