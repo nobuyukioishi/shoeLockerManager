@@ -22,14 +22,15 @@ shoeLocker.set_database_info(host='192.168.11.184',
 #                                  'lastOut': datetime.datetime.now()
 #                                 }
 
-shoeLocker.save_raspi_pic()
+# shoeLocker.save_raspi_pic()
 # shoebox edge points
 # x = ([99, 30], [425, 39], [108, 349], [406, 350]) 
 # shoe centered points
 x = ([124, 96], [415, 91], [115, 356], [409, 366]) 
 shoeLocker.change_locker_edge_points_to(shoe_box_edge_points=x)
-count = shoeLocker.divide_big_shoe_box(latest_pic="recent.jpg")
-shoeLocker.get_state(count)
+
+shoeLocker.divide_big_shoe_box(latest_pic="images/2017_4_19/17_1_8.png")
+shoeLocker.get_state()
 #shoeLocker.push_many_status()
 
 # shoeLocker.change_status_to(kwargs)
