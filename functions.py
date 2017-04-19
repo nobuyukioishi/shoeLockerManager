@@ -4,6 +4,7 @@ import cv2
 import os.path
 from keras.models import model_from_json
 from PIL import Image, ImageStat
+from datetime import datetime
 
 
 def pic_to_np_array(count, kernel_width=56, kernel_height=56):
@@ -97,7 +98,7 @@ def save_to_folder_func(image="latest_pic.jpg"):
     Save image to image_backup folder /images
     :param image: name of image
     """
-    time = datetime.datetime.today()
+    time = datetime.today()
 
     directory = "images/" + str(time.year) + "_" + str(time.month) + "_" + str(time.day)
     savename = "images/" + str(time.year) + "_" + str(time.month) + "_" + str(time.day) + "/" \
