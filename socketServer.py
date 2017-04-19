@@ -37,6 +37,9 @@ while True:
         # push status to shoe locker
         shoeLocker.divide_big_shoe_box(latest_pic="latest_pic.jpg")
         shoeLocker.get_state()
-        shoeLocker.push_many_status()
+        try:
+            shoeLocker.push_many_status()
+        except:
+            print("failed push_many_status")
     else:
         print("Returned false from is_pic_good, ignoring this loop . . .")

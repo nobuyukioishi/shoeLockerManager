@@ -64,18 +64,24 @@ class ShoeLocker:
         """
         x = int(kwargs['boxNo'] / self.col)
         y = kwargs['boxNo'] % self.row
-
+        print("kwargs['status']")
+        print(kwargs['status'])
+        print("self.lockeri[{0}][{1}]".format(x,y))
+        print(self.locker[x][y]['status'])
         # check if lastIn has set
         if kwargs['lastIn'] == -1:
             # lastIn, lastOut is not initialized yet
             if self.locker[x][y]['status'] is True and kwargs['status'] is False:
                 # shoe has moved out, renew LastOut
-                self.locker[x][y]['status'] = {'recordedTime': kwargs['recordedTime'],
+                self.locker[x][y] = {'recordedTime': kwargs['recordedTime'],
                                                'boxNo': kwargs['boxNo'],
                                                'status': kwargs['status'],
                                                'lastIn': self.locker[x][y]['lastIn'],
                                                'lastOut': kwargs['recordedTime']
                                                }
+                print("shoes have been moved out")
+                print(kwargs['boxNo'])
+                print(kwargs)
             elif self.locker[x][y]['status'] is False and kwargs['status'] is True:
                 # shoe has moved in, renew LastIn
                 self.locker[x][y] = {'recordedTime': kwargs['recordedTime'],
@@ -84,6 +90,9 @@ class ShoeLocker:
                                      'lastIn': kwargs['recordedTime'],
                                      'lastOut': self.locker[x][y]['lastOut']
                                      }
+                print("shoes have moved in")
+                print(kwargs['boxNo'])
+                print(kwargs)
             else:
                 # status hasn't changed, no change on last in, last out value
                 self.locker[x][y] = {'recordedTime': kwargs['recordedTime'],
@@ -92,6 +101,9 @@ class ShoeLocker:
                                      'lastIn': self.locker[x][y]['lastIn'],
                                      'lastOut': self.locker[x][y]['lastOut']
                                      }
+                print("status have not changed")
+                print(kwargs['boxNo'])
+                print(kwargs)
         else:
             # lastIn, lastOut is already initialized. Substitute directly from data.
             self.locker[x][y] = {'recordedTime': kwargs['recordedTime'],
@@ -100,6 +112,7 @@ class ShoeLocker:
                                  'lastIn': kwargs['lastIn'],
                                  'lastOut': kwargs['lastOut']
                                  }
+            print("else was called")
         return
 
     def print_status(self):
@@ -161,7 +174,7 @@ class ShoeLocker:
         # set state of each box by using change_status_to
         time_stamped_predict_list = []
         # TODO: fix date time ?
-        time = '{0:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now())
+        time = '{0:%Y-%m-%d %H:%M:%S}'.format(datetime.now())
         for index, predict in enumerate(predict_list):
 
             print("indexNo= ", index, "Accuracy= ", predict)
@@ -249,6 +262,7 @@ class ShoeLocker:
                 big_command = big_command + (current_box,)
             stmt_insert = "INSERT INTO "+self.table_name+" (recordedTime,boxNo,status,lastIn,lastOut) " \
                                                          "VALUES (%s, %s, %s, %s, %s)"
+            print(big_command)
             cursor.executemany(stmt_insert, big_command)
             connection.commit()
         return
