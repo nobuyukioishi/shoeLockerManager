@@ -1,0 +1,1714 @@
+kwargs['status']
+0
+self.lockeri[0][0]
+True
+else was called
+kwargs['status']
+1
+self.lockeri[0][1]
+True
+else was called
+kwargs['status']
+1
+self.lockeri[0][2]
+True
+else was called
+kwargs['status']
+0
+self.lockeri[1][0]
+True
+else was called
+kwargs['status']
+1
+self.lockeri[1][1]
+True
+else was called
+kwargs['status']
+1
+self.lockeri[1][2]
+True
+else was called
+kwargs['status']
+0
+self.lockeri[2][0]
+True
+else was called
+kwargs['status']
+0
+self.lockeri[2][1]
+True
+else was called
+kwargs['status']
+1
+self.lockeri[2][2]
+True
+else was called
+Got connection from ('192.168.11.213', 42090)
+Mean file = %s 0.0
+Returned false from is_pic_good, ignoring this loop . . .
+Got connection from ('192.168.11.213', 42092)
+Mean file = %s 231.845732421875
+indexNo=  0 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][0]
+0
+status have not changed
+0
+{'recordedTime': '2017-04-20 00:01:08', 'boxNo': 0, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  1 Accuracy=  [ 1.]
+kwargs['status']
+True
+self.lockeri[0][1]
+1
+status have not changed
+1
+{'recordedTime': '2017-04-20 00:01:08', 'boxNo': 1, 'status': True, 'lastIn': -1, 'lastOut': -1}
+indexNo=  2 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][2]
+1
+status have not changed
+2
+{'recordedTime': '2017-04-20 00:01:08', 'boxNo': 2, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  3 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][0]
+0
+status have not changed
+3
+{'recordedTime': '2017-04-20 00:01:08', 'boxNo': 3, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  4 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][1]
+1
+status have not changed
+4
+{'recordedTime': '2017-04-20 00:01:08', 'boxNo': 4, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  5 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][2]
+1
+status have not changed
+5
+{'recordedTime': '2017-04-20 00:01:08', 'boxNo': 5, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  6 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][0]
+0
+status have not changed
+6
+{'recordedTime': '2017-04-20 00:01:08', 'boxNo': 6, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  7 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][1]
+0
+status have not changed
+7
+{'recordedTime': '2017-04-20 00:01:08', 'boxNo': 7, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  8 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][2]
+1
+status have not changed
+8
+{'recordedTime': '2017-04-20 00:01:08', 'boxNo': 8, 'status': False, 'lastIn': -1, 'lastOut': -1}
+(('2017-04-20 00:01:08', 0, False, '2017-04-19 16:57:04', '2017-04-19 22:54:28'), ('2017-04-20 00:01:08', 1, True, '2017-04-19 22:54:28', '2017-04-19 17:00:41'), ('2017-04-20 00:01:08', 2, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 00:01:08', 3, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 00:01:08', 4, False, '2017-04-19 22:55:31', '2017-04-19 16:59:19'), ('2017-04-20 00:01:08', 5, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 00:01:08', 6, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 00:01:08', 7, False, '2017-04-19 16:59:47', '2017-04-19 22:54:28'), ('2017-04-20 00:01:08', 8, False, '2017-04-19 22:54:28', '2017-04-19 16:58:53'))
+images/2017_4_20/0_1_8.png
+Got connection from ('192.168.11.213', 42094)
+Mean file = %s 231.8700390625
+indexNo=  0 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][0]
+False
+status have not changed
+0
+{'recordedTime': '2017-04-20 00:31:35', 'boxNo': 0, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  1 Accuracy=  [ 1.]
+kwargs['status']
+True
+self.lockeri[0][1]
+True
+status have not changed
+1
+{'recordedTime': '2017-04-20 00:31:35', 'boxNo': 1, 'status': True, 'lastIn': -1, 'lastOut': -1}
+indexNo=  2 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][2]
+False
+status have not changed
+2
+{'recordedTime': '2017-04-20 00:31:35', 'boxNo': 2, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  3 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][0]
+False
+status have not changed
+3
+{'recordedTime': '2017-04-20 00:31:35', 'boxNo': 3, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  4 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][1]
+False
+status have not changed
+4
+{'recordedTime': '2017-04-20 00:31:35', 'boxNo': 4, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  5 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][2]
+False
+status have not changed
+5
+{'recordedTime': '2017-04-20 00:31:35', 'boxNo': 5, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  6 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][0]
+False
+status have not changed
+6
+{'recordedTime': '2017-04-20 00:31:35', 'boxNo': 6, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  7 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][1]
+False
+status have not changed
+7
+{'recordedTime': '2017-04-20 00:31:35', 'boxNo': 7, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  8 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][2]
+False
+status have not changed
+8
+{'recordedTime': '2017-04-20 00:31:35', 'boxNo': 8, 'status': False, 'lastIn': -1, 'lastOut': -1}
+(('2017-04-20 00:31:35', 0, False, '2017-04-19 16:57:04', '2017-04-19 22:54:28'), ('2017-04-20 00:31:35', 1, True, '2017-04-19 22:54:28', '2017-04-19 17:00:41'), ('2017-04-20 00:31:35', 2, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 00:31:35', 3, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 00:31:35', 4, False, '2017-04-19 22:55:31', '2017-04-19 16:59:19'), ('2017-04-20 00:31:35', 5, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 00:31:35', 6, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 00:31:35', 7, False, '2017-04-19 16:59:47', '2017-04-19 22:54:28'), ('2017-04-20 00:31:35', 8, False, '2017-04-19 22:54:28', '2017-04-19 16:58:53'))
+images/2017_4_20/0_31_35.png
+Got connection from ('192.168.11.213', 42096)
+Mean file = %s 231.856943359375
+indexNo=  0 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][0]
+False
+status have not changed
+0
+{'recordedTime': '2017-04-20 01:02:01', 'boxNo': 0, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  1 Accuracy=  [ 1.]
+kwargs['status']
+True
+self.lockeri[0][1]
+True
+status have not changed
+1
+{'recordedTime': '2017-04-20 01:02:01', 'boxNo': 1, 'status': True, 'lastIn': -1, 'lastOut': -1}
+indexNo=  2 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][2]
+False
+status have not changed
+2
+{'recordedTime': '2017-04-20 01:02:01', 'boxNo': 2, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  3 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][0]
+False
+status have not changed
+3
+{'recordedTime': '2017-04-20 01:02:01', 'boxNo': 3, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  4 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][1]
+False
+status have not changed
+4
+{'recordedTime': '2017-04-20 01:02:01', 'boxNo': 4, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  5 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][2]
+False
+status have not changed
+5
+{'recordedTime': '2017-04-20 01:02:01', 'boxNo': 5, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  6 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][0]
+False
+status have not changed
+6
+{'recordedTime': '2017-04-20 01:02:01', 'boxNo': 6, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  7 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][1]
+False
+status have not changed
+7
+{'recordedTime': '2017-04-20 01:02:01', 'boxNo': 7, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  8 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][2]
+False
+status have not changed
+8
+{'recordedTime': '2017-04-20 01:02:01', 'boxNo': 8, 'status': False, 'lastIn': -1, 'lastOut': -1}
+(('2017-04-20 01:02:01', 0, False, '2017-04-19 16:57:04', '2017-04-19 22:54:28'), ('2017-04-20 01:02:01', 1, True, '2017-04-19 22:54:28', '2017-04-19 17:00:41'), ('2017-04-20 01:02:01', 2, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 01:02:01', 3, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 01:02:01', 4, False, '2017-04-19 22:55:31', '2017-04-19 16:59:19'), ('2017-04-20 01:02:01', 5, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 01:02:01', 6, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 01:02:01', 7, False, '2017-04-19 16:59:47', '2017-04-19 22:54:28'), ('2017-04-20 01:02:01', 8, False, '2017-04-19 22:54:28', '2017-04-19 16:58:53'))
+images/2017_4_20/1_2_1.png
+Got connection from ('192.168.11.213', 42098)
+Mean file = %s 231.86206705729165
+indexNo=  0 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][0]
+False
+status have not changed
+0
+{'recordedTime': '2017-04-20 01:32:27', 'boxNo': 0, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  1 Accuracy=  [ 1.]
+kwargs['status']
+True
+self.lockeri[0][1]
+True
+status have not changed
+1
+{'recordedTime': '2017-04-20 01:32:27', 'boxNo': 1, 'status': True, 'lastIn': -1, 'lastOut': -1}
+indexNo=  2 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][2]
+False
+status have not changed
+2
+{'recordedTime': '2017-04-20 01:32:27', 'boxNo': 2, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  3 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][0]
+False
+status have not changed
+3
+{'recordedTime': '2017-04-20 01:32:27', 'boxNo': 3, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  4 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][1]
+False
+status have not changed
+4
+{'recordedTime': '2017-04-20 01:32:27', 'boxNo': 4, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  5 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][2]
+False
+status have not changed
+5
+{'recordedTime': '2017-04-20 01:32:27', 'boxNo': 5, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  6 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][0]
+False
+status have not changed
+6
+{'recordedTime': '2017-04-20 01:32:27', 'boxNo': 6, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  7 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][1]
+False
+status have not changed
+7
+{'recordedTime': '2017-04-20 01:32:27', 'boxNo': 7, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  8 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][2]
+False
+status have not changed
+8
+{'recordedTime': '2017-04-20 01:32:27', 'boxNo': 8, 'status': False, 'lastIn': -1, 'lastOut': -1}
+(('2017-04-20 01:32:27', 0, False, '2017-04-19 16:57:04', '2017-04-19 22:54:28'), ('2017-04-20 01:32:27', 1, True, '2017-04-19 22:54:28', '2017-04-19 17:00:41'), ('2017-04-20 01:32:27', 2, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 01:32:27', 3, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 01:32:27', 4, False, '2017-04-19 22:55:31', '2017-04-19 16:59:19'), ('2017-04-20 01:32:27', 5, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 01:32:27', 6, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 01:32:27', 7, False, '2017-04-19 16:59:47', '2017-04-19 22:54:28'), ('2017-04-20 01:32:27', 8, False, '2017-04-19 22:54:28', '2017-04-19 16:58:53'))
+images/2017_4_20/1_32_28.png
+Got connection from ('192.168.11.213', 42100)
+Mean file = %s 231.90268229166668
+indexNo=  0 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][0]
+False
+status have not changed
+0
+{'recordedTime': '2017-04-20 02:02:54', 'boxNo': 0, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  1 Accuracy=  [ 1.]
+kwargs['status']
+True
+self.lockeri[0][1]
+True
+status have not changed
+1
+{'recordedTime': '2017-04-20 02:02:54', 'boxNo': 1, 'status': True, 'lastIn': -1, 'lastOut': -1}
+indexNo=  2 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][2]
+False
+status have not changed
+2
+{'recordedTime': '2017-04-20 02:02:54', 'boxNo': 2, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  3 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][0]
+False
+status have not changed
+3
+{'recordedTime': '2017-04-20 02:02:54', 'boxNo': 3, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  4 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][1]
+False
+status have not changed
+4
+{'recordedTime': '2017-04-20 02:02:54', 'boxNo': 4, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  5 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][2]
+False
+status have not changed
+5
+{'recordedTime': '2017-04-20 02:02:54', 'boxNo': 5, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  6 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][0]
+False
+status have not changed
+6
+{'recordedTime': '2017-04-20 02:02:54', 'boxNo': 6, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  7 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][1]
+False
+status have not changed
+7
+{'recordedTime': '2017-04-20 02:02:54', 'boxNo': 7, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  8 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][2]
+False
+status have not changed
+8
+{'recordedTime': '2017-04-20 02:02:54', 'boxNo': 8, 'status': False, 'lastIn': -1, 'lastOut': -1}
+(('2017-04-20 02:02:54', 0, False, '2017-04-19 16:57:04', '2017-04-19 22:54:28'), ('2017-04-20 02:02:54', 1, True, '2017-04-19 22:54:28', '2017-04-19 17:00:41'), ('2017-04-20 02:02:54', 2, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 02:02:54', 3, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 02:02:54', 4, False, '2017-04-19 22:55:31', '2017-04-19 16:59:19'), ('2017-04-20 02:02:54', 5, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 02:02:54', 6, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 02:02:54', 7, False, '2017-04-19 16:59:47', '2017-04-19 22:54:28'), ('2017-04-20 02:02:54', 8, False, '2017-04-19 22:54:28', '2017-04-19 16:58:53'))
+images/2017_4_20/2_2_54.png
+Got connection from ('192.168.11.213', 42102)
+Mean file = %s 231.8870703125
+indexNo=  0 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][0]
+False
+status have not changed
+0
+{'recordedTime': '2017-04-20 02:33:21', 'boxNo': 0, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  1 Accuracy=  [ 1.]
+kwargs['status']
+True
+self.lockeri[0][1]
+True
+status have not changed
+1
+{'recordedTime': '2017-04-20 02:33:21', 'boxNo': 1, 'status': True, 'lastIn': -1, 'lastOut': -1}
+indexNo=  2 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][2]
+False
+status have not changed
+2
+{'recordedTime': '2017-04-20 02:33:21', 'boxNo': 2, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  3 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][0]
+False
+status have not changed
+3
+{'recordedTime': '2017-04-20 02:33:21', 'boxNo': 3, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  4 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][1]
+False
+status have not changed
+4
+{'recordedTime': '2017-04-20 02:33:21', 'boxNo': 4, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  5 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][2]
+False
+status have not changed
+5
+{'recordedTime': '2017-04-20 02:33:21', 'boxNo': 5, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  6 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][0]
+False
+status have not changed
+6
+{'recordedTime': '2017-04-20 02:33:21', 'boxNo': 6, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  7 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][1]
+False
+status have not changed
+7
+{'recordedTime': '2017-04-20 02:33:21', 'boxNo': 7, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  8 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][2]
+False
+status have not changed
+8
+{'recordedTime': '2017-04-20 02:33:21', 'boxNo': 8, 'status': False, 'lastIn': -1, 'lastOut': -1}
+(('2017-04-20 02:33:21', 0, False, '2017-04-19 16:57:04', '2017-04-19 22:54:28'), ('2017-04-20 02:33:21', 1, True, '2017-04-19 22:54:28', '2017-04-19 17:00:41'), ('2017-04-20 02:33:21', 2, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 02:33:21', 3, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 02:33:21', 4, False, '2017-04-19 22:55:31', '2017-04-19 16:59:19'), ('2017-04-20 02:33:21', 5, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 02:33:21', 6, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 02:33:21', 7, False, '2017-04-19 16:59:47', '2017-04-19 22:54:28'), ('2017-04-20 02:33:21', 8, False, '2017-04-19 22:54:28', '2017-04-19 16:58:53'))
+images/2017_4_20/2_33_21.png
+Got connection from ('192.168.11.213', 42104)
+Mean file = %s 231.85552408854167
+indexNo=  0 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][0]
+False
+status have not changed
+0
+{'recordedTime': '2017-04-20 03:03:47', 'boxNo': 0, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  1 Accuracy=  [ 1.]
+kwargs['status']
+True
+self.lockeri[0][1]
+True
+status have not changed
+1
+{'recordedTime': '2017-04-20 03:03:47', 'boxNo': 1, 'status': True, 'lastIn': -1, 'lastOut': -1}
+indexNo=  2 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][2]
+False
+status have not changed
+2
+{'recordedTime': '2017-04-20 03:03:47', 'boxNo': 2, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  3 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][0]
+False
+status have not changed
+3
+{'recordedTime': '2017-04-20 03:03:47', 'boxNo': 3, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  4 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][1]
+False
+status have not changed
+4
+{'recordedTime': '2017-04-20 03:03:47', 'boxNo': 4, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  5 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][2]
+False
+status have not changed
+5
+{'recordedTime': '2017-04-20 03:03:47', 'boxNo': 5, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  6 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][0]
+False
+status have not changed
+6
+{'recordedTime': '2017-04-20 03:03:47', 'boxNo': 6, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  7 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][1]
+False
+status have not changed
+7
+{'recordedTime': '2017-04-20 03:03:47', 'boxNo': 7, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  8 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][2]
+False
+status have not changed
+8
+{'recordedTime': '2017-04-20 03:03:47', 'boxNo': 8, 'status': False, 'lastIn': -1, 'lastOut': -1}
+(('2017-04-20 03:03:47', 0, False, '2017-04-19 16:57:04', '2017-04-19 22:54:28'), ('2017-04-20 03:03:47', 1, True, '2017-04-19 22:54:28', '2017-04-19 17:00:41'), ('2017-04-20 03:03:47', 2, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 03:03:47', 3, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 03:03:47', 4, False, '2017-04-19 22:55:31', '2017-04-19 16:59:19'), ('2017-04-20 03:03:47', 5, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 03:03:47', 6, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 03:03:47', 7, False, '2017-04-19 16:59:47', '2017-04-19 22:54:28'), ('2017-04-20 03:03:47', 8, False, '2017-04-19 22:54:28', '2017-04-19 16:58:53'))
+images/2017_4_20/3_3_47.png
+Got connection from ('192.168.11.213', 42106)
+Mean file = %s 231.83271484375
+indexNo=  0 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][0]
+False
+status have not changed
+0
+{'recordedTime': '2017-04-20 03:34:13', 'boxNo': 0, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  1 Accuracy=  [ 1.]
+kwargs['status']
+True
+self.lockeri[0][1]
+True
+status have not changed
+1
+{'recordedTime': '2017-04-20 03:34:13', 'boxNo': 1, 'status': True, 'lastIn': -1, 'lastOut': -1}
+indexNo=  2 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][2]
+False
+status have not changed
+2
+{'recordedTime': '2017-04-20 03:34:13', 'boxNo': 2, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  3 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][0]
+False
+status have not changed
+3
+{'recordedTime': '2017-04-20 03:34:13', 'boxNo': 3, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  4 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][1]
+False
+status have not changed
+4
+{'recordedTime': '2017-04-20 03:34:13', 'boxNo': 4, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  5 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][2]
+False
+status have not changed
+5
+{'recordedTime': '2017-04-20 03:34:13', 'boxNo': 5, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  6 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][0]
+False
+status have not changed
+6
+{'recordedTime': '2017-04-20 03:34:13', 'boxNo': 6, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  7 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][1]
+False
+status have not changed
+7
+{'recordedTime': '2017-04-20 03:34:13', 'boxNo': 7, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  8 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][2]
+False
+status have not changed
+8
+{'recordedTime': '2017-04-20 03:34:13', 'boxNo': 8, 'status': False, 'lastIn': -1, 'lastOut': -1}
+(('2017-04-20 03:34:13', 0, False, '2017-04-19 16:57:04', '2017-04-19 22:54:28'), ('2017-04-20 03:34:13', 1, True, '2017-04-19 22:54:28', '2017-04-19 17:00:41'), ('2017-04-20 03:34:13', 2, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 03:34:13', 3, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 03:34:13', 4, False, '2017-04-19 22:55:31', '2017-04-19 16:59:19'), ('2017-04-20 03:34:13', 5, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 03:34:13', 6, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 03:34:13', 7, False, '2017-04-19 16:59:47', '2017-04-19 22:54:28'), ('2017-04-20 03:34:13', 8, False, '2017-04-19 22:54:28', '2017-04-19 16:58:53'))
+images/2017_4_20/3_34_13.png
+Got connection from ('192.168.11.213', 42108)
+Mean file = %s 231.88885416666668
+indexNo=  0 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][0]
+False
+status have not changed
+0
+{'recordedTime': '2017-04-20 04:04:40', 'boxNo': 0, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  1 Accuracy=  [ 1.]
+kwargs['status']
+True
+self.lockeri[0][1]
+True
+status have not changed
+1
+{'recordedTime': '2017-04-20 04:04:40', 'boxNo': 1, 'status': True, 'lastIn': -1, 'lastOut': -1}
+indexNo=  2 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][2]
+False
+status have not changed
+2
+{'recordedTime': '2017-04-20 04:04:40', 'boxNo': 2, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  3 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][0]
+False
+status have not changed
+3
+{'recordedTime': '2017-04-20 04:04:40', 'boxNo': 3, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  4 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][1]
+False
+status have not changed
+4
+{'recordedTime': '2017-04-20 04:04:40', 'boxNo': 4, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  5 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][2]
+False
+status have not changed
+5
+{'recordedTime': '2017-04-20 04:04:40', 'boxNo': 5, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  6 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][0]
+False
+status have not changed
+6
+{'recordedTime': '2017-04-20 04:04:40', 'boxNo': 6, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  7 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][1]
+False
+status have not changed
+7
+{'recordedTime': '2017-04-20 04:04:40', 'boxNo': 7, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  8 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][2]
+False
+status have not changed
+8
+{'recordedTime': '2017-04-20 04:04:40', 'boxNo': 8, 'status': False, 'lastIn': -1, 'lastOut': -1}
+(('2017-04-20 04:04:40', 0, False, '2017-04-19 16:57:04', '2017-04-19 22:54:28'), ('2017-04-20 04:04:40', 1, True, '2017-04-19 22:54:28', '2017-04-19 17:00:41'), ('2017-04-20 04:04:40', 2, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 04:04:40', 3, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 04:04:40', 4, False, '2017-04-19 22:55:31', '2017-04-19 16:59:19'), ('2017-04-20 04:04:40', 5, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 04:04:40', 6, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 04:04:40', 7, False, '2017-04-19 16:59:47', '2017-04-19 22:54:28'), ('2017-04-20 04:04:40', 8, False, '2017-04-19 22:54:28', '2017-04-19 16:58:53'))
+images/2017_4_20/4_4_40.png
+Got connection from ('192.168.11.213', 42110)
+Mean file = %s 231.84264322916667
+indexNo=  0 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][0]
+False
+status have not changed
+0
+{'recordedTime': '2017-04-20 04:35:06', 'boxNo': 0, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  1 Accuracy=  [ 1.]
+kwargs['status']
+True
+self.lockeri[0][1]
+True
+status have not changed
+1
+{'recordedTime': '2017-04-20 04:35:06', 'boxNo': 1, 'status': True, 'lastIn': -1, 'lastOut': -1}
+indexNo=  2 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][2]
+False
+status have not changed
+2
+{'recordedTime': '2017-04-20 04:35:06', 'boxNo': 2, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  3 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][0]
+False
+status have not changed
+3
+{'recordedTime': '2017-04-20 04:35:06', 'boxNo': 3, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  4 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][1]
+False
+status have not changed
+4
+{'recordedTime': '2017-04-20 04:35:06', 'boxNo': 4, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  5 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][2]
+False
+status have not changed
+5
+{'recordedTime': '2017-04-20 04:35:06', 'boxNo': 5, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  6 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][0]
+False
+status have not changed
+6
+{'recordedTime': '2017-04-20 04:35:06', 'boxNo': 6, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  7 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][1]
+False
+status have not changed
+7
+{'recordedTime': '2017-04-20 04:35:06', 'boxNo': 7, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  8 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][2]
+False
+status have not changed
+8
+{'recordedTime': '2017-04-20 04:35:06', 'boxNo': 8, 'status': False, 'lastIn': -1, 'lastOut': -1}
+(('2017-04-20 04:35:06', 0, False, '2017-04-19 16:57:04', '2017-04-19 22:54:28'), ('2017-04-20 04:35:06', 1, True, '2017-04-19 22:54:28', '2017-04-19 17:00:41'), ('2017-04-20 04:35:06', 2, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 04:35:06', 3, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 04:35:06', 4, False, '2017-04-19 22:55:31', '2017-04-19 16:59:19'), ('2017-04-20 04:35:06', 5, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 04:35:06', 6, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 04:35:06', 7, False, '2017-04-19 16:59:47', '2017-04-19 22:54:28'), ('2017-04-20 04:35:06', 8, False, '2017-04-19 22:54:28', '2017-04-19 16:58:53'))
+images/2017_4_20/4_35_6.png
+Got connection from ('192.168.11.213', 42112)
+Mean file = %s 231.882705078125
+indexNo=  0 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][0]
+False
+status have not changed
+0
+{'recordedTime': '2017-04-20 05:05:33', 'boxNo': 0, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  1 Accuracy=  [ 1.]
+kwargs['status']
+True
+self.lockeri[0][1]
+True
+status have not changed
+1
+{'recordedTime': '2017-04-20 05:05:33', 'boxNo': 1, 'status': True, 'lastIn': -1, 'lastOut': -1}
+indexNo=  2 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][2]
+False
+status have not changed
+2
+{'recordedTime': '2017-04-20 05:05:33', 'boxNo': 2, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  3 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][0]
+False
+status have not changed
+3
+{'recordedTime': '2017-04-20 05:05:33', 'boxNo': 3, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  4 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][1]
+False
+status have not changed
+4
+{'recordedTime': '2017-04-20 05:05:33', 'boxNo': 4, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  5 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][2]
+False
+status have not changed
+5
+{'recordedTime': '2017-04-20 05:05:33', 'boxNo': 5, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  6 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][0]
+False
+status have not changed
+6
+{'recordedTime': '2017-04-20 05:05:33', 'boxNo': 6, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  7 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][1]
+False
+status have not changed
+7
+{'recordedTime': '2017-04-20 05:05:33', 'boxNo': 7, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  8 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][2]
+False
+status have not changed
+8
+{'recordedTime': '2017-04-20 05:05:33', 'boxNo': 8, 'status': False, 'lastIn': -1, 'lastOut': -1}
+(('2017-04-20 05:05:33', 0, False, '2017-04-19 16:57:04', '2017-04-19 22:54:28'), ('2017-04-20 05:05:33', 1, True, '2017-04-19 22:54:28', '2017-04-19 17:00:41'), ('2017-04-20 05:05:33', 2, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 05:05:33', 3, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 05:05:33', 4, False, '2017-04-19 22:55:31', '2017-04-19 16:59:19'), ('2017-04-20 05:05:33', 5, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 05:05:33', 6, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 05:05:33', 7, False, '2017-04-19 16:59:47', '2017-04-19 22:54:28'), ('2017-04-20 05:05:33', 8, False, '2017-04-19 22:54:28', '2017-04-19 16:58:53'))
+images/2017_4_20/5_5_33.png
+Got connection from ('192.168.11.213', 42114)
+Mean file = %s 231.936015625
+indexNo=  0 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][0]
+False
+status have not changed
+0
+{'recordedTime': '2017-04-20 05:36:00', 'boxNo': 0, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  1 Accuracy=  [ 1.]
+kwargs['status']
+True
+self.lockeri[0][1]
+True
+status have not changed
+1
+{'recordedTime': '2017-04-20 05:36:00', 'boxNo': 1, 'status': True, 'lastIn': -1, 'lastOut': -1}
+indexNo=  2 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][2]
+False
+status have not changed
+2
+{'recordedTime': '2017-04-20 05:36:00', 'boxNo': 2, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  3 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][0]
+False
+status have not changed
+3
+{'recordedTime': '2017-04-20 05:36:00', 'boxNo': 3, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  4 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][1]
+False
+status have not changed
+4
+{'recordedTime': '2017-04-20 05:36:00', 'boxNo': 4, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  5 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][2]
+False
+status have not changed
+5
+{'recordedTime': '2017-04-20 05:36:00', 'boxNo': 5, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  6 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][0]
+False
+status have not changed
+6
+{'recordedTime': '2017-04-20 05:36:00', 'boxNo': 6, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  7 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][1]
+False
+status have not changed
+7
+{'recordedTime': '2017-04-20 05:36:00', 'boxNo': 7, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  8 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][2]
+False
+status have not changed
+8
+{'recordedTime': '2017-04-20 05:36:00', 'boxNo': 8, 'status': False, 'lastIn': -1, 'lastOut': -1}
+(('2017-04-20 05:36:00', 0, False, '2017-04-19 16:57:04', '2017-04-19 22:54:28'), ('2017-04-20 05:36:00', 1, True, '2017-04-19 22:54:28', '2017-04-19 17:00:41'), ('2017-04-20 05:36:00', 2, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 05:36:00', 3, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 05:36:00', 4, False, '2017-04-19 22:55:31', '2017-04-19 16:59:19'), ('2017-04-20 05:36:00', 5, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 05:36:00', 6, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 05:36:00', 7, False, '2017-04-19 16:59:47', '2017-04-19 22:54:28'), ('2017-04-20 05:36:00', 8, False, '2017-04-19 22:54:28', '2017-04-19 16:58:53'))
+images/2017_4_20/5_36_0.png
+Got connection from ('192.168.11.213', 42116)
+Mean file = %s 232.62065755208334
+indexNo=  0 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][0]
+False
+status have not changed
+0
+{'recordedTime': '2017-04-20 06:06:26', 'boxNo': 0, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  1 Accuracy=  [ 1.]
+kwargs['status']
+True
+self.lockeri[0][1]
+True
+status have not changed
+1
+{'recordedTime': '2017-04-20 06:06:26', 'boxNo': 1, 'status': True, 'lastIn': -1, 'lastOut': -1}
+indexNo=  2 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][2]
+False
+status have not changed
+2
+{'recordedTime': '2017-04-20 06:06:26', 'boxNo': 2, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  3 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][0]
+False
+status have not changed
+3
+{'recordedTime': '2017-04-20 06:06:26', 'boxNo': 3, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  4 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][1]
+False
+status have not changed
+4
+{'recordedTime': '2017-04-20 06:06:26', 'boxNo': 4, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  5 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][2]
+False
+status have not changed
+5
+{'recordedTime': '2017-04-20 06:06:26', 'boxNo': 5, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  6 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][0]
+False
+status have not changed
+6
+{'recordedTime': '2017-04-20 06:06:26', 'boxNo': 6, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  7 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][1]
+False
+status have not changed
+7
+{'recordedTime': '2017-04-20 06:06:26', 'boxNo': 7, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  8 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][2]
+False
+status have not changed
+8
+{'recordedTime': '2017-04-20 06:06:26', 'boxNo': 8, 'status': False, 'lastIn': -1, 'lastOut': -1}
+(('2017-04-20 06:06:26', 0, False, '2017-04-19 16:57:04', '2017-04-19 22:54:28'), ('2017-04-20 06:06:26', 1, True, '2017-04-19 22:54:28', '2017-04-19 17:00:41'), ('2017-04-20 06:06:26', 2, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 06:06:26', 3, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 06:06:26', 4, False, '2017-04-19 22:55:31', '2017-04-19 16:59:19'), ('2017-04-20 06:06:26', 5, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 06:06:26', 6, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 06:06:26', 7, False, '2017-04-19 16:59:47', '2017-04-19 22:54:28'), ('2017-04-20 06:06:26', 8, False, '2017-04-19 22:54:28', '2017-04-19 16:58:53'))
+images/2017_4_20/6_6_26.png
+Got connection from ('192.168.11.213', 42118)
+Mean file = %s 233.27142252604168
+indexNo=  0 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][0]
+False
+status have not changed
+0
+{'recordedTime': '2017-04-20 06:36:52', 'boxNo': 0, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  1 Accuracy=  [ 1.]
+kwargs['status']
+True
+self.lockeri[0][1]
+True
+status have not changed
+1
+{'recordedTime': '2017-04-20 06:36:52', 'boxNo': 1, 'status': True, 'lastIn': -1, 'lastOut': -1}
+indexNo=  2 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][2]
+False
+status have not changed
+2
+{'recordedTime': '2017-04-20 06:36:52', 'boxNo': 2, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  3 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][0]
+False
+status have not changed
+3
+{'recordedTime': '2017-04-20 06:36:52', 'boxNo': 3, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  4 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][1]
+False
+status have not changed
+4
+{'recordedTime': '2017-04-20 06:36:52', 'boxNo': 4, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  5 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][2]
+False
+status have not changed
+5
+{'recordedTime': '2017-04-20 06:36:52', 'boxNo': 5, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  6 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][0]
+False
+status have not changed
+6
+{'recordedTime': '2017-04-20 06:36:52', 'boxNo': 6, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  7 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][1]
+False
+status have not changed
+7
+{'recordedTime': '2017-04-20 06:36:52', 'boxNo': 7, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  8 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][2]
+False
+status have not changed
+8
+{'recordedTime': '2017-04-20 06:36:52', 'boxNo': 8, 'status': False, 'lastIn': -1, 'lastOut': -1}
+(('2017-04-20 06:36:52', 0, False, '2017-04-19 16:57:04', '2017-04-19 22:54:28'), ('2017-04-20 06:36:52', 1, True, '2017-04-19 22:54:28', '2017-04-19 17:00:41'), ('2017-04-20 06:36:52', 2, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 06:36:52', 3, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 06:36:52', 4, False, '2017-04-19 22:55:31', '2017-04-19 16:59:19'), ('2017-04-20 06:36:52', 5, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 06:36:52', 6, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 06:36:52', 7, False, '2017-04-19 16:59:47', '2017-04-19 22:54:28'), ('2017-04-20 06:36:52', 8, False, '2017-04-19 22:54:28', '2017-04-19 16:58:53'))
+images/2017_4_20/6_36_52.png
+Got connection from ('192.168.11.213', 42120)
+Mean file = %s 233.59558919270833
+indexNo=  0 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][0]
+False
+status have not changed
+0
+{'recordedTime': '2017-04-20 07:07:19', 'boxNo': 0, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  1 Accuracy=  [ 1.]
+kwargs['status']
+True
+self.lockeri[0][1]
+True
+status have not changed
+1
+{'recordedTime': '2017-04-20 07:07:19', 'boxNo': 1, 'status': True, 'lastIn': -1, 'lastOut': -1}
+indexNo=  2 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][2]
+False
+status have not changed
+2
+{'recordedTime': '2017-04-20 07:07:19', 'boxNo': 2, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  3 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][0]
+False
+status have not changed
+3
+{'recordedTime': '2017-04-20 07:07:19', 'boxNo': 3, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  4 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][1]
+False
+status have not changed
+4
+{'recordedTime': '2017-04-20 07:07:19', 'boxNo': 4, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  5 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][2]
+False
+status have not changed
+5
+{'recordedTime': '2017-04-20 07:07:19', 'boxNo': 5, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  6 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][0]
+False
+status have not changed
+6
+{'recordedTime': '2017-04-20 07:07:19', 'boxNo': 6, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  7 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][1]
+False
+status have not changed
+7
+{'recordedTime': '2017-04-20 07:07:19', 'boxNo': 7, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  8 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][2]
+False
+status have not changed
+8
+{'recordedTime': '2017-04-20 07:07:19', 'boxNo': 8, 'status': False, 'lastIn': -1, 'lastOut': -1}
+(('2017-04-20 07:07:19', 0, False, '2017-04-19 16:57:04', '2017-04-19 22:54:28'), ('2017-04-20 07:07:19', 1, True, '2017-04-19 22:54:28', '2017-04-19 17:00:41'), ('2017-04-20 07:07:19', 2, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 07:07:19', 3, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 07:07:19', 4, False, '2017-04-19 22:55:31', '2017-04-19 16:59:19'), ('2017-04-20 07:07:19', 5, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 07:07:19', 6, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 07:07:19', 7, False, '2017-04-19 16:59:47', '2017-04-19 22:54:28'), ('2017-04-20 07:07:19', 8, False, '2017-04-19 22:54:28', '2017-04-19 16:58:53'))
+images/2017_4_20/7_7_19.png
+Got connection from ('192.168.11.213', 42122)
+Mean file = %s 233.782294921875
+indexNo=  0 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][0]
+False
+status have not changed
+0
+{'recordedTime': '2017-04-20 07:37:45', 'boxNo': 0, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  1 Accuracy=  [ 1.]
+kwargs['status']
+True
+self.lockeri[0][1]
+True
+status have not changed
+1
+{'recordedTime': '2017-04-20 07:37:45', 'boxNo': 1, 'status': True, 'lastIn': -1, 'lastOut': -1}
+indexNo=  2 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][2]
+False
+status have not changed
+2
+{'recordedTime': '2017-04-20 07:37:45', 'boxNo': 2, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  3 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][0]
+False
+status have not changed
+3
+{'recordedTime': '2017-04-20 07:37:45', 'boxNo': 3, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  4 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][1]
+False
+status have not changed
+4
+{'recordedTime': '2017-04-20 07:37:45', 'boxNo': 4, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  5 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][2]
+False
+status have not changed
+5
+{'recordedTime': '2017-04-20 07:37:45', 'boxNo': 5, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  6 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][0]
+False
+status have not changed
+6
+{'recordedTime': '2017-04-20 07:37:45', 'boxNo': 6, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  7 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][1]
+False
+status have not changed
+7
+{'recordedTime': '2017-04-20 07:37:45', 'boxNo': 7, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  8 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][2]
+False
+status have not changed
+8
+{'recordedTime': '2017-04-20 07:37:45', 'boxNo': 8, 'status': False, 'lastIn': -1, 'lastOut': -1}
+(('2017-04-20 07:37:45', 0, False, '2017-04-19 16:57:04', '2017-04-19 22:54:28'), ('2017-04-20 07:37:45', 1, True, '2017-04-19 22:54:28', '2017-04-19 17:00:41'), ('2017-04-20 07:37:45', 2, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 07:37:45', 3, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 07:37:45', 4, False, '2017-04-19 22:55:31', '2017-04-19 16:59:19'), ('2017-04-20 07:37:45', 5, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 07:37:45', 6, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 07:37:45', 7, False, '2017-04-19 16:59:47', '2017-04-19 22:54:28'), ('2017-04-20 07:37:45', 8, False, '2017-04-19 22:54:28', '2017-04-19 16:58:53'))
+images/2017_4_20/7_37_45.png
+Got connection from ('192.168.11.213', 42124)
+Mean file = %s 233.8370703125
+indexNo=  0 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][0]
+False
+status have not changed
+0
+{'recordedTime': '2017-04-20 08:08:11', 'boxNo': 0, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  1 Accuracy=  [ 1.]
+kwargs['status']
+True
+self.lockeri[0][1]
+True
+status have not changed
+1
+{'recordedTime': '2017-04-20 08:08:11', 'boxNo': 1, 'status': True, 'lastIn': -1, 'lastOut': -1}
+indexNo=  2 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][2]
+False
+status have not changed
+2
+{'recordedTime': '2017-04-20 08:08:11', 'boxNo': 2, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  3 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][0]
+False
+status have not changed
+3
+{'recordedTime': '2017-04-20 08:08:11', 'boxNo': 3, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  4 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][1]
+False
+status have not changed
+4
+{'recordedTime': '2017-04-20 08:08:11', 'boxNo': 4, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  5 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][2]
+False
+status have not changed
+5
+{'recordedTime': '2017-04-20 08:08:11', 'boxNo': 5, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  6 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][0]
+False
+status have not changed
+6
+{'recordedTime': '2017-04-20 08:08:11', 'boxNo': 6, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  7 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][1]
+False
+status have not changed
+7
+{'recordedTime': '2017-04-20 08:08:11', 'boxNo': 7, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  8 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][2]
+False
+status have not changed
+8
+{'recordedTime': '2017-04-20 08:08:11', 'boxNo': 8, 'status': False, 'lastIn': -1, 'lastOut': -1}
+(('2017-04-20 08:08:11', 0, False, '2017-04-19 16:57:04', '2017-04-19 22:54:28'), ('2017-04-20 08:08:11', 1, True, '2017-04-19 22:54:28', '2017-04-19 17:00:41'), ('2017-04-20 08:08:11', 2, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 08:08:11', 3, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 08:08:11', 4, False, '2017-04-19 22:55:31', '2017-04-19 16:59:19'), ('2017-04-20 08:08:11', 5, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 08:08:11', 6, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 08:08:11', 7, False, '2017-04-19 16:59:47', '2017-04-19 22:54:28'), ('2017-04-20 08:08:11', 8, False, '2017-04-19 22:54:28', '2017-04-19 16:58:53'))
+images/2017_4_20/8_8_11.png
+Got connection from ('192.168.11.213', 42126)
+Mean file = %s 233.88235677083333
+indexNo=  0 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][0]
+False
+status have not changed
+0
+{'recordedTime': '2017-04-20 08:38:38', 'boxNo': 0, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  1 Accuracy=  [ 1.]
+kwargs['status']
+True
+self.lockeri[0][1]
+True
+status have not changed
+1
+{'recordedTime': '2017-04-20 08:38:38', 'boxNo': 1, 'status': True, 'lastIn': -1, 'lastOut': -1}
+indexNo=  2 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][2]
+False
+status have not changed
+2
+{'recordedTime': '2017-04-20 08:38:38', 'boxNo': 2, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  3 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][0]
+False
+status have not changed
+3
+{'recordedTime': '2017-04-20 08:38:38', 'boxNo': 3, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  4 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][1]
+False
+status have not changed
+4
+{'recordedTime': '2017-04-20 08:38:38', 'boxNo': 4, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  5 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][2]
+False
+status have not changed
+5
+{'recordedTime': '2017-04-20 08:38:38', 'boxNo': 5, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  6 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][0]
+False
+status have not changed
+6
+{'recordedTime': '2017-04-20 08:38:38', 'boxNo': 6, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  7 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][1]
+False
+status have not changed
+7
+{'recordedTime': '2017-04-20 08:38:38', 'boxNo': 7, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  8 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][2]
+False
+status have not changed
+8
+{'recordedTime': '2017-04-20 08:38:38', 'boxNo': 8, 'status': False, 'lastIn': -1, 'lastOut': -1}
+(('2017-04-20 08:38:38', 0, False, '2017-04-19 16:57:04', '2017-04-19 22:54:28'), ('2017-04-20 08:38:38', 1, True, '2017-04-19 22:54:28', '2017-04-19 17:00:41'), ('2017-04-20 08:38:38', 2, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 08:38:38', 3, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 08:38:38', 4, False, '2017-04-19 22:55:31', '2017-04-19 16:59:19'), ('2017-04-20 08:38:38', 5, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 08:38:38', 6, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 08:38:38', 7, False, '2017-04-19 16:59:47', '2017-04-19 22:54:28'), ('2017-04-20 08:38:38', 8, False, '2017-04-19 22:54:28', '2017-04-19 16:58:53'))
+images/2017_4_20/8_38_38.png
+Got connection from ('192.168.11.213', 42128)
+Mean file = %s 233.84450520833335
+indexNo=  0 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][0]
+False
+status have not changed
+0
+{'recordedTime': '2017-04-20 09:09:04', 'boxNo': 0, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  1 Accuracy=  [ 1.]
+kwargs['status']
+True
+self.lockeri[0][1]
+True
+status have not changed
+1
+{'recordedTime': '2017-04-20 09:09:04', 'boxNo': 1, 'status': True, 'lastIn': -1, 'lastOut': -1}
+indexNo=  2 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][2]
+False
+status have not changed
+2
+{'recordedTime': '2017-04-20 09:09:04', 'boxNo': 2, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  3 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][0]
+False
+status have not changed
+3
+{'recordedTime': '2017-04-20 09:09:04', 'boxNo': 3, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  4 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][1]
+False
+status have not changed
+4
+{'recordedTime': '2017-04-20 09:09:04', 'boxNo': 4, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  5 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][2]
+False
+status have not changed
+5
+{'recordedTime': '2017-04-20 09:09:04', 'boxNo': 5, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  6 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][0]
+False
+status have not changed
+6
+{'recordedTime': '2017-04-20 09:09:04', 'boxNo': 6, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  7 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][1]
+False
+status have not changed
+7
+{'recordedTime': '2017-04-20 09:09:04', 'boxNo': 7, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  8 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][2]
+False
+status have not changed
+8
+{'recordedTime': '2017-04-20 09:09:04', 'boxNo': 8, 'status': False, 'lastIn': -1, 'lastOut': -1}
+(('2017-04-20 09:09:04', 0, False, '2017-04-19 16:57:04', '2017-04-19 22:54:28'), ('2017-04-20 09:09:04', 1, True, '2017-04-19 22:54:28', '2017-04-19 17:00:41'), ('2017-04-20 09:09:04', 2, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 09:09:04', 3, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 09:09:04', 4, False, '2017-04-19 22:55:31', '2017-04-19 16:59:19'), ('2017-04-20 09:09:04', 5, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 09:09:04', 6, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 09:09:04', 7, False, '2017-04-19 16:59:47', '2017-04-19 22:54:28'), ('2017-04-20 09:09:04', 8, False, '2017-04-19 22:54:28', '2017-04-19 16:58:53'))
+images/2017_4_20/9_9_4.png
+Got connection from ('192.168.11.213', 42130)
+Mean file = %s 233.997001953125
+indexNo=  0 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][0]
+False
+status have not changed
+0
+{'recordedTime': '2017-04-20 09:39:31', 'boxNo': 0, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  1 Accuracy=  [ 1.]
+kwargs['status']
+True
+self.lockeri[0][1]
+True
+status have not changed
+1
+{'recordedTime': '2017-04-20 09:39:31', 'boxNo': 1, 'status': True, 'lastIn': -1, 'lastOut': -1}
+indexNo=  2 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][2]
+False
+status have not changed
+2
+{'recordedTime': '2017-04-20 09:39:31', 'boxNo': 2, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  3 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][0]
+False
+status have not changed
+3
+{'recordedTime': '2017-04-20 09:39:31', 'boxNo': 3, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  4 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][1]
+False
+status have not changed
+4
+{'recordedTime': '2017-04-20 09:39:31', 'boxNo': 4, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  5 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][2]
+False
+status have not changed
+5
+{'recordedTime': '2017-04-20 09:39:31', 'boxNo': 5, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  6 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][0]
+False
+status have not changed
+6
+{'recordedTime': '2017-04-20 09:39:31', 'boxNo': 6, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  7 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][1]
+False
+status have not changed
+7
+{'recordedTime': '2017-04-20 09:39:31', 'boxNo': 7, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  8 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][2]
+False
+status have not changed
+8
+{'recordedTime': '2017-04-20 09:39:31', 'boxNo': 8, 'status': False, 'lastIn': -1, 'lastOut': -1}
+(('2017-04-20 09:39:31', 0, False, '2017-04-19 16:57:04', '2017-04-19 22:54:28'), ('2017-04-20 09:39:31', 1, True, '2017-04-19 22:54:28', '2017-04-19 17:00:41'), ('2017-04-20 09:39:31', 2, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 09:39:31', 3, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 09:39:31', 4, False, '2017-04-19 22:55:31', '2017-04-19 16:59:19'), ('2017-04-20 09:39:31', 5, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 09:39:31', 6, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 09:39:31', 7, False, '2017-04-19 16:59:47', '2017-04-19 22:54:28'), ('2017-04-20 09:39:31', 8, False, '2017-04-19 22:54:28', '2017-04-19 16:58:53'))
+images/2017_4_20/9_39_31.png
+Got connection from ('192.168.11.213', 42132)
+Mean file = %s 234.168369140625
+indexNo=  0 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][0]
+False
+status have not changed
+0
+{'recordedTime': '2017-04-20 10:09:57', 'boxNo': 0, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  1 Accuracy=  [ 1.]
+kwargs['status']
+True
+self.lockeri[0][1]
+True
+status have not changed
+1
+{'recordedTime': '2017-04-20 10:09:57', 'boxNo': 1, 'status': True, 'lastIn': -1, 'lastOut': -1}
+indexNo=  2 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][2]
+False
+status have not changed
+2
+{'recordedTime': '2017-04-20 10:09:57', 'boxNo': 2, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  3 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][0]
+False
+status have not changed
+3
+{'recordedTime': '2017-04-20 10:09:57', 'boxNo': 3, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  4 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][1]
+False
+status have not changed
+4
+{'recordedTime': '2017-04-20 10:09:57', 'boxNo': 4, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  5 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][2]
+False
+status have not changed
+5
+{'recordedTime': '2017-04-20 10:09:57', 'boxNo': 5, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  6 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][0]
+False
+status have not changed
+6
+{'recordedTime': '2017-04-20 10:09:57', 'boxNo': 6, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  7 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][1]
+False
+status have not changed
+7
+{'recordedTime': '2017-04-20 10:09:57', 'boxNo': 7, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  8 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][2]
+False
+status have not changed
+8
+{'recordedTime': '2017-04-20 10:09:57', 'boxNo': 8, 'status': False, 'lastIn': -1, 'lastOut': -1}
+(('2017-04-20 10:09:57', 0, False, '2017-04-19 16:57:04', '2017-04-19 22:54:28'), ('2017-04-20 10:09:57', 1, True, '2017-04-19 22:54:28', '2017-04-19 17:00:41'), ('2017-04-20 10:09:57', 2, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 10:09:57', 3, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 10:09:57', 4, False, '2017-04-19 22:55:31', '2017-04-19 16:59:19'), ('2017-04-20 10:09:57', 5, False, '2017-04-19 22:54:28', '2017-04-19 16:59:19'), ('2017-04-20 10:09:57', 6, False, '2017-04-19 17:00:41', '2017-04-19 22:54:28'), ('2017-04-20 10:09:57', 7, False, '2017-04-19 16:59:47', '2017-04-19 22:54:28'), ('2017-04-20 10:09:57', 8, False, '2017-04-19 22:54:28', '2017-04-19 16:58:53'))
+images/2017_4_20/10_9_57.png
+Got connection from ('192.168.11.213', 42134)
+Mean file = %s 233.81024088541668
+indexNo=  0 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[0][0]
+False
+status have not changed
+0
+{'recordedTime': '2017-04-20 10:40:24', 'boxNo': 0, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  1 Accuracy=  [ 1.]
+kwargs['status']
+True
+self.lockeri[0][1]
+True
+status have not changed
+1
+{'recordedTime': '2017-04-20 10:40:24', 'boxNo': 1, 'status': True, 'lastIn': -1, 'lastOut': -1}
+indexNo=  2 Accuracy=  [ 1.]
+kwargs['status']
+True
+self.lockeri[0][2]
+False
+shoes have moved in
+2
+{'recordedTime': '2017-04-20 10:40:24', 'boxNo': 2, 'status': True, 'lastIn': -1, 'lastOut': -1}
+indexNo=  3 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][0]
+False
+status have not changed
+3
+{'recordedTime': '2017-04-20 10:40:24', 'boxNo': 3, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  4 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][1]
+False
+status have not changed
+4
+{'recordedTime': '2017-04-20 10:40:24', 'boxNo': 4, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  5 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[1][2]
+False
+status have not changed
+5
+{'recordedTime': '2017-04-20 10:40:24', 'boxNo': 5, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  6 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][0]
+False
+status have not changed
+6
+{'recordedTime': '2017-04-20 10:40:24', 'boxNo': 6, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  7 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][1]
+False
+status have not changed
+7
+{'recordedTime': '2017-04-20 10:40:24', 'boxNo': 7, 'status': False, 'lastIn': -1, 'lastOut': -1}
+indexNo=  8 Accuracy=  [ 0.]
+kwargs['status']
+False
+self.lockeri[2][2]
